@@ -1,0 +1,30 @@
+
+.categoriesBar{
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    -moz-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+}
+
+.categoriesBar button{
+    background-color: var(--secondary-gray);
+    padding: 0.5em 1em;
+    margin: 0 .5em;
+    border: none;
+    border-radius: 20px;
+    color: var(--primary-white);
+    -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    -moz-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+}
+
+button.isSelected{
+    border: 3px solid var(--primary-blue);
+}

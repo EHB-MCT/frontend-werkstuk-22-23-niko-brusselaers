@@ -1,0 +1,46 @@
+
+.navigation{
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.navigation div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.navigation div *{
+    margin: 0 .5em;  
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}
+
+.faviconLogo{
+    width: fit-content;
+    -webkit-box-shadow: 0px 0px 6px 1px var(--primary-white);
+    -moz-box-shadow: 0px 0px 6px 1px var(--primary-white);
+    box-shadow: 0px 0px 6px 1px var(--primary-white);
+    border-radius: 5px;
+}
+
+.languageOptions{
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}
+
+
+
+
+
+
+
