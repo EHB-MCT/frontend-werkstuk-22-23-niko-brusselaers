@@ -1,0 +1,58 @@
+.chapterContainerLeft,.chapterContainerRight{
+    padding-top: 40vh;
+    width:  70vw;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.chapterContainerLeft h1{
+    position: absolute;
+    font-size: 30pt;
+    width: 40%;
+    text-decoration: underline;
+    right: 0;
+    bottom: 5vh;
+    right: 1vw;
+}
+
+.chapterContainerLeft img{
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+
+
+
+.chapterContainerLeft p{
+    width: 30vw;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    background-color: white;
+    color: var(--secondary-dark-gray);
+    border: solid 2px var(--secondary-dark-gray);
+    padding: 1em 2em;
+    font-weight: bold;
+}
+
+.chapterContainerRight h1{
+    font-size: 30pt;
+}
+
+.chapterContainerRight img{
+    width: 70%;
+}
+
+.chapterContainerRight p{
+    position: absolute;
+    width: 30vw;
+    bottom: 0%;
+    right: 0;
+    background-color: white;
+    color: var(--secondary-dark-gray);
+    border: solid 2px var(--secondary-dark-gray);
+    padding: 1em 2em;
+    font-weight: bold;
+}

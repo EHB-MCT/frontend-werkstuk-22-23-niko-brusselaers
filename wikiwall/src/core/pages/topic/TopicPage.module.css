@@ -7,10 +7,11 @@ div.topicPage{
 
 div.introductionContainer{
     width:  70vw;
-    height: 75vh;
+    height: 85vh;
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .introductionContainer h1{
@@ -24,12 +25,13 @@ div.introductionContainer{
 
 .introductionContainer p{
     position: absolute;
-    width: 40%;
-    bottom: 0;
+    width: 30vw;
+    bottom: 0%;
     right: 0;
     background-color: white;
     color: var(--secondary-dark-gray);
     border: solid 2px var(--secondary-dark-gray);
     padding: 1em 2em;
     font-weight: bold;
+    font-size: .75em;
 }

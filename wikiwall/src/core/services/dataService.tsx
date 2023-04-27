@@ -1,5 +1,5 @@
 export default async function getCarData() {
-    return await fetch("./assets/data.json").then(response => response.json())
+    return await fetch("./assets/carData.json").then(response => response.json())
     
   
 }
