@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./TopicChapter.module.css";
 import { topicChapter } from "../../../types/topicChapter";
 
-function TopicChapter({
-  fetchedChapterData,
-}: {
-  fetchedChapterData: topicChapter | undefined;
-}) {
+function TopicChapter({ fetchedChapterData, imageIsLeft }: { fetchedChapterData: topicChapter | undefined, imageIsLeft: boolean }) {
   const [chapterData, setChapterData] = useState<topicChapter | undefined>(
     undefined
   );
@@ -17,11 +13,21 @@ function TopicChapter({
     }
   }, [fetchedChapterData]);
 
-  return (
+  return imageIsLeft ? (
     <div className={styles.chapterContainerLeft}>
       <img src={`./assets/images/carsPage/${chapterData?.image}`} alt="" />
-      <h1>{chapterData?.title}</h1>
-      <p>{chapterData?.description}</p>
+      <div>
+        <h1>{chapterData?.title}</h1>
+        <p>{chapterData?.description}</p>
+      </div>
+    </div>
+  ) : (
+    <div className={styles.chapterContainerRight}>
+      <img src={`./assets/images/carsPage/${chapterData?.image}`} alt="" />
+      <div>
+        <h1>{chapterData?.title}</h1>
+        <p>{chapterData?.description}</p>
+      </div>
     </div>
   );
 }

@@ -6,8 +6,10 @@ div.topicPage{
 }
 
 div.introductionContainer{
-    width:  70vw;
-    height: 85vh;
+    margin-top: 2em;
+    margin-bottom: 25em;
+    width:  60em;
+    height: 38em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,8 +27,8 @@ div.introductionContainer{
 
 .introductionContainer p{
     position: absolute;
-    width: 30vw;
-    bottom: 0%;
+    width: 30em;
+    bottom: 0;
     right: 0;
     background-color: white;
     color: var(--secondary-dark-gray);
