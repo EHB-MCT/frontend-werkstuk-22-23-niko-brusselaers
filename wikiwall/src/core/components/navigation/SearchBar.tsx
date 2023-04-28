@@ -1,4 +1,4 @@
-import styles from './SearchBar.module.css'
+import styles from "./css/SearchBar.module.css";
 
 function SearchBar() {
     return (

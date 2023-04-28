@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.outletContainer{
+  padding-top: 20vh;
+}

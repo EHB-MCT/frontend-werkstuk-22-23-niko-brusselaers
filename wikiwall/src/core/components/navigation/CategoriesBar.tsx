@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./CategoriesBar.module.css";
+import styles from "./css/CategoriesBar.module.css";
 
 function CatagoriesBar() {
   const [selectedCategory, setSelectedCategory] = useState("Design");

@@ -1,0 +1,75 @@
+.navigation{
+    position: relative;
+}
+
+.navigation > *{
+    position: absolute;    
+}
+
+.navigationBottomContainer{
+    padding-top: 8vh;
+    height: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    -moz-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    background-color: var(--primary-blue);
+}
+
+
+
+.navigationBottomContainer img.logo{
+    width: 70em;
+    padding-bottom: 5em;
+}
+
+/**/
+
+div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
+    
+    margin: 0 .5em;  
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}
+
+.navigationTopLeftContainer, .navigationTopRightContainer{
+    position: absolute;
+    z-index: 1;
+}
+
+.navigationTopLeftContainer{
+    top: 2em;
+    left: 3em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationTopRightContainer{
+    top: 2em;
+    right: 3em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.faviconLogo{
+    width: fit-content;
+    -webkit-box-shadow: 0px 0px 6px 1px var(--primary-white);
+    -moz-box-shadow: 0px 0px 6px 1px var(--primary-white);
+    box-shadow: 0px 0px 6px 1px var(--primary-white);
+    border-radius: 5px;
+}
+
+.languageOptions{
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}

@@ -1,8 +1,8 @@
 .searchBar{
     position: relative;
     display: flex;
-    height: 4vh;
-    width: 50vw;
+    height: 3em;
+    width: 50em;
     align-items: center;
 }
 
@@ -11,12 +11,13 @@
     border: none;
     border-radius: 35px;
     height: 100%;
-    width: 40vw;
+    width: 100%;
     padding: 0 5vw;
 }
 
 .searchBar label, .searchBar button{
     position: absolute;
+    z-index: 2;
 }
 
 .searchBar button{

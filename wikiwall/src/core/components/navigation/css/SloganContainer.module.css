@@ -1,0 +1,15 @@
+.sloganContainer p{
+    font-weight: bold;
+    color: var(--primary-white);
+    margin: 0.25em;
+}
+
+.sloganContainer p:nth-child(2){
+    opacity: 66%;
+}
+.sloganContainer p:nth-child(3){
+    opacity: 33%;
+}
+.sloganContainer p:nth-child(4){
+    opacity: 15%;
+}
