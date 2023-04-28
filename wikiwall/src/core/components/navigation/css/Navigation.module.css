@@ -1,5 +1,7 @@
 .navigation{
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .navigation > *{
@@ -7,8 +9,9 @@
 }
 
 .navigationBottomContainer{
+    position: absolute;
+    z-index: 0;
     padding-top: 8vh;
-    height: 40em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +42,7 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
 .navigationTopLeftContainer, .navigationTopRightContainer{
     position: absolute;
     z-index: 1;
+
 }
 
 .navigationTopLeftContainer{
@@ -51,6 +55,7 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
 }
 
 .navigationTopRightContainer{
+    z-index: 1;
     top: 2em;
     right: 3em;
     height: 2em;
@@ -72,4 +77,13 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
     border: none;
     background-color: var(--primary-blue);
     color: var(--primary-white);
+}
+
+.backgroundColorContainer{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 6em;
+    background-color: var(--primary-blue);
 }

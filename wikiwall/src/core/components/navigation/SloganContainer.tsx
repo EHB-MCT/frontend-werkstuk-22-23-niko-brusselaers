@@ -1,13 +1,19 @@
+import { motion } from 'framer-motion';
 import styles from './css/SloganContainer.module.css'
+import { navVariants } from './variants/navVariants';
 
-function SloganContainer() {
+function SloganContainer({isCollapsed}:{isCollapsed:boolean}) {
     return (
-      <div className={styles.sloganContainer}>
+      <motion.div
+        className={styles.sloganContainer}
+        animate={isCollapsed ? "closed" : "open"}
+        variants={navVariants.show}
+      >
         <p>Any topic, interactive fun.</p>
         <p>Any topic, interactive fun.</p>
         <p>Any topic, interactive fun.</p>
         <p>Any topic, interactive fun.</p>
-      </div>
+      </motion.div>
     );
 }
 
