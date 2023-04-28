@@ -19,7 +19,7 @@
     position: absolute;
     background-color: white;
     color: var(--secondary-dark-gray);
-    border: solid 2px var(--secondary-dark-gray);
+    border: solid 3px var(--secondary-dark-gray);
 }
 
 .chapterContainerLeft p,.chapterContainerRight p{

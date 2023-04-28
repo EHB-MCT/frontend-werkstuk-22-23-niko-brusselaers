@@ -18,22 +18,31 @@ function TopicPage() {
       <div className={styles.introductionContainer}>
         <h1>CAR</h1>
         <img
-          src={`./assets/images/carsPage/${carData?.introduction.image}`}
+          src={carData?.introduction.image}
           alt=""
         />
         <p>{carData?.introduction.description}</p>
       </div>
       <div className={styles.topicChapterContainer}>
-          {carData?.chapters.map((chapterData, index) => {
-            if (index % 2 === 0 ) {
-              return <TopicChapter fetchedChapterData={chapterData} key={index} imageIsLeft={true}/>
-            } else{
-              return <TopicChapter fetchedChapterData={chapterData} key={index} imageIsLeft={false}/>
-
-            }
-            
+        {carData?.chapters.map((chapterData, index) => {
+          if (index % 2 === 0) {
+            return (
+              <TopicChapter
+                fetchedChapterData={chapterData}
+                key={index}
+                imageIsLeft={true}
+              />
+            );
+          } else {
+            return (
+              <TopicChapter
+                fetchedChapterData={chapterData}
+                key={index}
+                imageIsLeft={false}
+              />
+            );
           }
-          )}
+        })}
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ function TopicChapter({ fetchedChapterData, imageIsLeft }: { fetchedChapterData:
 
   return imageIsLeft ? (
     <div className={styles.chapterContainerLeft}>
-      <img src={`./assets/images/carsPage/${chapterData?.image}`} alt="" />
+      <img src={chapterData?.image} alt="" />
       <div>
         <h1>{chapterData?.title}</h1>
         <p>{chapterData?.description}</p>
@@ -23,7 +23,7 @@ function TopicChapter({ fetchedChapterData, imageIsLeft }: { fetchedChapterData:
     </div>
   ) : (
     <div className={styles.chapterContainerRight}>
-      <img src={`./assets/images/carsPage/${chapterData?.image}`} alt="" />
+      <img src={chapterData?.image} alt="" />
       <div>
         <h1>{chapterData?.title}</h1>
         <p>{chapterData?.description}</p>
