@@ -1,6 +1,15 @@
 
 class NavVariants {
 
+    navigation = {
+        open:{
+            height: "40em"
+        },
+        closed:{
+            height: "7em"
+        }
+    }
+
     bottomContainer = {
         open: {
             height: "40em",

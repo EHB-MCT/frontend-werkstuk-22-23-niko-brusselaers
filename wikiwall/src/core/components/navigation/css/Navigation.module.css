@@ -87,3 +87,8 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
     height: 6em;
     background-color: var(--primary-blue);
 }
+
+.navigationPlaceholderContainer{
+    position: relative;
+    height: 50em;
+}

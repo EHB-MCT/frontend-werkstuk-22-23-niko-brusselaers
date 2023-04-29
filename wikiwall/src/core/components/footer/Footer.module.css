@@ -1,0 +1,29 @@
+.footerContainer{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-blue);
+    padding-top: 5em;
+}
+
+.footerContainer img{
+    width: 50vw;
+}
+
+.footerContainer div{
+    align-self: flex-end;
+    padding-right: 5em;
+    display: flex;
+}
+
+.footerContainer p{
+    font-size: 11pt;
+    color: var(--primary-white);
+    width: 15vw;
+    padding: 2em;
+}
+
+

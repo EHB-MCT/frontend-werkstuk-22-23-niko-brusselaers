@@ -1,7 +1,8 @@
 
 function HomePage() {
     return ( 
-        <div style={{height: "200vh",}}>
+        <div style={{height: "100vh",}}>
+            <p>testing</p>
         </div>
      );
 }
