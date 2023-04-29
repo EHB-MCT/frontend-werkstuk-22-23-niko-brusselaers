@@ -9,10 +9,30 @@ function SloganContainer({isCollapsed}:{isCollapsed:boolean}) {
         animate={isCollapsed ? "closed" : "open"}
         variants={navVariants.show}
       >
-        <p>Any topic, interactive fun.</p>
-        <p>Any topic, interactive fun.</p>
-        <p>Any topic, interactive fun.</p>
-        <p>Any topic, interactive fun.</p>
+        <motion.p
+          animate={{ y: [100, 0], opacity: [0, 1] }}
+          transition={{ ease: "easeOut", duration: ".75", delay: 1.25 }}
+        >
+          Any topic, interactive fun.
+        </motion.p>
+        <motion.p
+          animate={{ y: [100, 0], opacity: [0, .66] }}
+          transition={{ ease: "easeOut", duration: ".65", delay: 1.5 }}
+        >
+          Any topic, interactive fun.
+        </motion.p>
+        <motion.p
+          animate={{ y: [100, 0], opacity: [0, .33] }}
+          transition={{ ease: "easeOut", duration: ".55", delay: 1.75 }}
+        >
+          Any topic, interactive fun.
+        </motion.p>
+        <motion.p
+          animate={{ y: [100, 0], opacity: [0, .15] }}
+          transition={{ ease: "easeOut", duration: ".50", delay: 2 }}
+        >
+          Any topic, interactive fun.
+        </motion.p>
       </motion.div>
     );
 }

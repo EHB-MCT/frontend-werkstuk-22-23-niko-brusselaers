@@ -1,7 +1,9 @@
 import { useState } from "react";
 import styles from "./css/CategoriesBar.module.css";
+import { motion } from "framer-motion";
+import { navVariants } from "../../shared/variants/navVariants";
 
-function CatagoriesBar() {
+function CatagoriesBar({ isCollapsed }: { isCollapsed: boolean }) {
   const [selectedCategory, setSelectedCategory] = useState("Design");
   const categories = [
     "Design",
@@ -14,7 +16,11 @@ function CatagoriesBar() {
   ];
 
   return (
-    <div className={styles.categoriesBar}>
+    <motion.div
+      className={styles.categoriesBar}
+      animate={isCollapsed ? "closed" : "open"}
+      variants={navVariants.catagoriesBar}
+    >
       {categories.map((category, key) => {
         if (category === selectedCategory) {
           return (
@@ -41,7 +47,7 @@ function CatagoriesBar() {
           );
         }
       })}
-    </div>
+    </motion.div>
   );
 }
 

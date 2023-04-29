@@ -1,12 +1,12 @@
 .footerContainer{
     width: 100vw;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--primary-blue);
     padding-top: 5em;
+    margin: 0;
 }
 
 .footerContainer img{
@@ -16,13 +16,13 @@
 .footerContainer div{
     align-self: flex-end;
     padding-right: 5em;
+    width: 45%;
     display: flex;
 }
 
 .footerContainer p{
-    font-size: 11pt;
+    font-size: 10pt;
     color: var(--primary-white);
-    width: 15vw;
     padding: 2em;
 }
 

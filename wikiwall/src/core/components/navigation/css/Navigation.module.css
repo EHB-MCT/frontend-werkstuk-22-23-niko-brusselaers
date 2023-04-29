@@ -11,7 +11,6 @@
 .navigationBottomContainer{
     position: absolute;
     z-index: 0;
-    padding-top: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,17 +21,12 @@
     background-color: var(--primary-blue);
 }
 
-
-
 .navigationBottomContainer img.logo{
-    width: 70em;
-    padding-bottom: 5em;
+    width: 65vw;
+    padding-bottom: 2em;
 }
 
-/**/
-
 div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
-    
     margin: 0 .5em;  
     border: none;
     background-color: var(--primary-blue);
@@ -42,28 +36,18 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
 .navigationTopLeftContainer, .navigationTopRightContainer{
     position: absolute;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2.5em;
+    height: 2em;
+
 
 }
 
 .navigationTopLeftContainer{
-    top: 2em;
-    left: 3em;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 3vw;    
 }
-
-.navigationTopRightContainer{
-    z-index: 1;
-    top: 2em;
-    right: 3em;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .faviconLogo{
     width: fit-content;
@@ -71,6 +55,10 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
     -moz-box-shadow: 0px 0px 6px 1px var(--primary-white);
     box-shadow: 0px 0px 6px 1px var(--primary-white);
     border-radius: 5px;
+}
+
+.navigationTopRightContainer{
+    right: 3vw;
 }
 
 .languageOptions{
@@ -88,7 +76,5 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
     background-color: var(--primary-blue);
 }
 
-.navigationPlaceholderContainer{
-    position: relative;
-    height: 50em;
-}
+
+

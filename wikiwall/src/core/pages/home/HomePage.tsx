@@ -1,7 +1,9 @@
+import styles from './HomePage.module.css'
+
 
 function HomePage() {
     return ( 
-        <div style={{height: "100vh",}}>
+        <div className={styles.homePageContainer}>
             <p>testing</p>
         </div>
      );
