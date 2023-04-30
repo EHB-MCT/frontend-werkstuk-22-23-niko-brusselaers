@@ -1,4 +1,14 @@
 .homePageContainer{
-    padding-top: 62vh;
-    min-height: 100vh;
+    padding: 55vh 0 5vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.topicItemsContainer{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-auto-rows: 20em;
+    gap: 2em;
+    grid-auto-flow: dense;
+
 }

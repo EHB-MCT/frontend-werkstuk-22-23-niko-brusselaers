@@ -75,7 +75,7 @@ function Navigation() {
           className={styles.navigationBottomContainer}
           animate={isCollapsed ? "closed" : "open"}
           variants={navVariants.bottomContainer}
-          transition={{ duration: 1.25 }}
+          transition={{ duration: .25 }}
         >
           <motion.img
             animate={isCollapsed ? "closed" : "open"}

@@ -1,5 +1,6 @@
 .navigation{
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100vw;
 }
@@ -10,7 +11,7 @@
 
 .navigationBottomContainer{
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +36,7 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
 
 .navigationTopLeftContainer, .navigationTopRightContainer{
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
