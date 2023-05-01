@@ -3,6 +3,7 @@ import styles from "./TopicPage.module.css";
 import getCarData from "../../services/dataService";
 import { carData } from "../../types/carData";
 import TopicChapter from "./components/TopicChapter";
+import TopicReferences from "./components/TopicReferences";
 
 function TopicPage() {
   const [carData, setCarData] = useState<carData | undefined>(undefined);
@@ -43,6 +44,7 @@ function TopicPage() {
             );
           }
         })}
+        <TopicReferences references={["test1", "test2", "test3"]}/>
       </div>
     </div>
   );
