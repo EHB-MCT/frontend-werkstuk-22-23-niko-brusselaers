@@ -1,7 +1,7 @@
 .homePageContainer{
     padding: 55vh 0 5vh;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .topicItemsContainer{

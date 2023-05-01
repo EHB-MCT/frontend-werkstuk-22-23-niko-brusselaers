@@ -47,7 +47,7 @@ function Navigation() {
         transition={{ duration: 0.5 }}
       >
         <div className={styles.navigationTopLeftContainer}>
-          <Link to={"/"}>
+          <Link to={"#"}>
             <img
               className={styles.faviconLogo}
               src="./assets/images/wikiwall_favicon.png"

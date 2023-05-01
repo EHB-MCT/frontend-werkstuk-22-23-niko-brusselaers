@@ -1,21 +1,26 @@
+import {motion } from 'framer-motion';
 import './TopicItem.css'
+import ITopicDetails from '../../../shared/types/ITopicDetails'
 
-function TopicItem({ topicGridSize, categoryType= "sport" }: { topicGridSize: string, categoryType: string }) {
+function TopicItem({topicGridSize, topicItemDetails }: { topicGridSize: string, topicItemDetails: ITopicDetails }) {
   return (
-    <div className={`topicItemContainer ${topicGridSize}`}>
-      <div className="imageContainer">
-        <img
-          src="https://pixabay.com/get/g3d47dca952353bca43d012c1f2335d31b9893737ab00df9d2edade2db9581a6e1d97b083e14651de738f841cc7aa2fb3_1280.jpg"
-          alt=""
-        />
-      </div>
-      <div className='titleContainer'>
-        <p>lorem ipsum</p>
-      </div>
-      <div className="categoryContainer">
-        <span></span> <p>{categoryType}</p>
-      </div>
-    </div>
+    <motion.div
+      className={`topicItemContainer ${topicGridSize}`}
+      animate={{ y: [100, 0], opacity: [0, 1] }}
+      transition={{ ease: "easeOut", duration: ".75", delay: 0.5 }}
+    >
+      <a href={topicItemDetails.url}>
+        <div className="imageContainer">
+          <img src={topicItemDetails.image} alt="" />
+        </div>
+        <div className="titleContainer">
+          <p style={{textDecoration: "none"}}>{topicItemDetails.title}</p>
+        </div>
+        <div className="categoryContainer">
+          <span></span> <p>{topicItemDetails.category}</p>
+        </div>
+      </a>
+    </motion.div>
   );
 }
 
