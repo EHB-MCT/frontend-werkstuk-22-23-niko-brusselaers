@@ -1,16 +1,13 @@
 
 .categoriesBar{
     width: 100vw;
-    height: 7vh;
+    height: 4em;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: row;
     background-color: rgba(255, 255, 255, 0);
-    -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
-    -moz-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
-    box-shadow: 1px 2px 2px 0px var(--secondary-gray);
 }
 
 .categoriesBar button{
@@ -20,11 +17,11 @@
     border: none;
     border-radius: 20px;
     color: var(--primary-white);
-    -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    /* -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
     -moz-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
-    box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    box-shadow: 1px 2px 2px 0px var(--secondary-gray); */
 }
 
 button.isSelected{
-    border: 3px solid var(--primary-blue);
+    border: 3px solid var(--secondary-blue);
 }

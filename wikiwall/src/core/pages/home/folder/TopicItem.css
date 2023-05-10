@@ -1,0 +1,116 @@
+.topicItemContainer{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--primary-white);
+    -webkit-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    -moz-box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+    box-shadow: 1px 2px 2px 0px var(--secondary-gray);
+}
+
+.topicItemContainer a{
+    text-decoration: none;
+}
+
+.imageContainer{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.titleContainer{
+    display: flex;
+    align-items: flex-end;
+    height: 15%;
+    padding: 0 1em;
+}
+
+.topicItemContainer img{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-white);
+    border-radius: 20px 20px 0  0;
+}
+
+.titleContainer p {
+    font-weight: bold;
+    font-size: 20pt;
+    color: var(--secondary-dark-gray);
+
+}
+
+.categoryContainer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: .5em;
+    left: .5em;
+    width: 6em;
+    border-radius: 20px;
+    background-color: var(--secondary-gray);
+
+}
+
+.categoryContainer p{
+    color: var(--primary-white);
+}
+
+.categoryContainer span{
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/********************
+** class variables **
+********************/
+
+.featuredCategory, .forYouCategory,.discoverCategory{
+    background-color: var(--primary-blue);
+}
+
+.featuredCategory span, .forYouCategory span,.discoverCategory span{
+    display: block;
+}
+
+.featuredCategory p, .forYouCategory p,.discoverCategory p{
+    font-weight: bold;
+}
+
+.featuredCategory span{
+    background-color: var(--tertiary-pink);
+}
+
+.forYouCategory span{
+    background-color: var(--tertiary-green);
+}
+
+.discoverCategory span{
+    background-color: var(--tertiary-orange);
+}
+
+.gridDefault{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gridDefault .titleContainer > p{
+    font-size: 11pt;
+}
+
+.twoColumn{
+    grid-column: span 2;
+}
+
+.threeColumn{
+    grid-column: span 3;
+}
+
+.twoRow{
+    grid-row: span 2;
+}

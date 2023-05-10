@@ -1,7 +1,7 @@
 .searchBar{
     position: relative;
     display: flex;
-    height: 4vh;
+    height: 3em;
     width: 50vw;
     align-items: center;
 }
@@ -11,12 +11,14 @@
     border: none;
     border-radius: 35px;
     height: 100%;
-    width: 40vw;
+    min-height: 3em;
+    width: 100%;
     padding: 0 5vw;
 }
 
 .searchBar label, .searchBar button{
     position: absolute;
+    z-index: 1;
 }
 
 .searchBar button{
@@ -24,7 +26,7 @@
     background-color: var(--primary-blue);
     color: var(--primary-white);
     height: 80%;
-    width: 6em;
+    width: 20%;
     border-radius: 20px;
     border: none;
 }
@@ -32,4 +34,5 @@
 .searchBar label{
     left: 1.5em;
     width: 1em;
+    top: 30%;
 }

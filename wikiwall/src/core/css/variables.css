@@ -1,3 +1,4 @@
+/* global css values */
 :root{
   --main-font: "poppins regular";
   --primary-blue: #0000CB;
@@ -5,4 +6,7 @@
   --secondary-blue: #000090;
   --secondary-gray: #C9C7C7;
   --secondary-dark-gray: #515054;
+  --tertiary-pink: #E517A9;
+  --tertiary-orange:#E57222;
+  --tertiary-green:#17E569;
 }

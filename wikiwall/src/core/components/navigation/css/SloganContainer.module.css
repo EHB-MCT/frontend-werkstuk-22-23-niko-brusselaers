@@ -1,0 +1,5 @@
+.sloganContainer p{
+    font-weight: bold;
+    color: var(--primary-white);
+    margin: 0.25em;
+}
