@@ -3,7 +3,8 @@ div.topicPage{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../../../../public/assets/images/textured_background.png');
+    width: 100%;
+    background: url('../../../../public/assets/images/textured_background.png');
 }
 
 div.introductionContainer{
@@ -15,6 +16,7 @@ div.introductionContainer{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    
 }
 
 .introductionContainer h1{

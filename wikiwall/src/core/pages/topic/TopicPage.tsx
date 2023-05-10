@@ -32,6 +32,7 @@ function TopicPage() {
                 fetchedChapterData={chapterData}
                 key={index}
                 imageIsLeft={true}
+                scrollYPosition={index*1000}
               />
             );
           } else {
@@ -40,6 +41,7 @@ function TopicPage() {
                 fetchedChapterData={chapterData}
                 key={index}
                 imageIsLeft={false}
+                scrollYPosition={index * 1000}
               />
             );
           }
