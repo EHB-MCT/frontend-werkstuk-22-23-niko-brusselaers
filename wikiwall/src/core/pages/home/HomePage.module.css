@@ -1,5 +1,4 @@
 .homePageContainer{
-    padding: 55vh 0 5vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
@@ -10,5 +9,18 @@
     grid-auto-rows: 20em;
     gap: 2em;
     grid-auto-flow: dense;
+    z-index: 1;
 
+}
+
+@media only screen and (max-height: 1080px) {
+    .homePageContainer{
+        padding: 35% 0 5vh;
+    }
+}
+
+@media only screen and (max-height: 1440px), screen and(min-height:1080px) {
+    .homePageContainer{
+        padding: 24% 0 5vh;
+    }
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css'
 import TopicItem from './folder/TopicItem';
 import ITopicDetails from '../../shared/types/ITopicDetails';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
 interface Topic {
   topicItemDetails: ITopicDetails
@@ -10,6 +11,17 @@ interface Topic {
 
 function HomePage() {
   const [topicItemList, setTopicItemList] = useState<Topic[] | undefined>(undefined);
+  const [isCollapsed,setIsCollapsed] = useState<boolean>(false)
+  const scrollYProgress = useScroll().scrollY;
+
+
+   useMotionValueEvent(scrollYProgress, "change", () => {
+       if (scrollYProgress.get() > 300) {
+         setIsCollapsed(true);
+       } else {
+         setIsCollapsed(false);
+       }
+   });
 
     useEffect(() => {
       let list:Topic[] = []
@@ -33,9 +45,11 @@ function HomePage() {
     return (
       <div className={styles.homePageContainer}>
         <div></div>
-        <div className={styles.topicItemsContainer}>
+        <motion.div 
+        style={isCollapsed ?{ zIndex: 0} : {zIndex:1}}
+        className={styles.topicItemsContainer}>
             {(topicItemList?.map((element:Topic) => <TopicItem topicItemDetails={element.topicItemDetails}  topicGridSize={element.topicGridSize}/>))}
-        </div>
+        </motion.div>
         <div></div>
       </div>
     );
