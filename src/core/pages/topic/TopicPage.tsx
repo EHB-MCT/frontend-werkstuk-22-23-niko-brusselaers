@@ -8,6 +8,7 @@ import TopicReferences from "./components/TopicReferences";
 function TopicPage() {
   const [carData, setCarData] = useState<carData | undefined>(undefined);
 
+  //method to retrieve data about Topic
   useEffect(() => {
     getCarData().then((data) => {
       setCarData(data);

@@ -16,7 +16,7 @@ function HomePage() {
   const [isCollapsed,setIsCollapsed] = useState<boolean>(false)
   const scrollYProgress = useScroll().scrollY;
 
-
+    //if we scroll far enough down the page, change isCollapsed value and z-index of topicListContainer get changed
    useMotionValueEvent(scrollYProgress, "change", () => {
        if (scrollYProgress.get() > 300) {
          setIsCollapsed(true);
@@ -25,6 +25,7 @@ function HomePage() {
        }
    });
 
+   // create filler data to display on homepage
     useEffect(() => {
       let list:Topic[] = []
       const gridOptions = ["gridDefault","twoColumn", "threeColumn twoRow"];
