@@ -1,0 +1,9 @@
+.topicReferencesContainer{
+    padding-bottom: 20em;
+}
+
+.topicReferencesContainer ul li a{
+    color: (--secondary-dark-gray);
+    font-size: 11pt;
+    font-weight: bold;
+}
