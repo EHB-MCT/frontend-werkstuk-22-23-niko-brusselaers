@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css'
 import TopicItem from './folder/TopicItem';
 import ITopicDetails from '../../shared/types/ITopicDetails';
+import Navigation from '../../components/navigation/Navigation';
+import Footer from '../../components/footer/Footer';
 
 interface Topic {
   topicItemDetails: ITopicDetails
@@ -31,13 +33,22 @@ function HomePage() {
     }, []);
 
     return (
-      <div className={styles.homePageContainer}>
-        <div></div>
-        <div className={styles.topicItemsContainer}>
-            {(topicItemList?.map((element:Topic) => <TopicItem topicItemDetails={element.topicItemDetails}  topicGridSize={element.topicGridSize}/>))}
+      <>
+        <Navigation/>
+        <div className={styles.homePageContainer}>
+          <div></div>
+          <div className={styles.topicItemsContainer}>
+            {topicItemList?.map((element: Topic) => (
+              <TopicItem
+                topicItemDetails={element.topicItemDetails}
+                topicGridSize={element.topicGridSize}
+              />
+            ))}
+          </div>
+          <div></div>
         </div>
-        <div></div>
-      </div>
+        <Footer/>
+      </>
     );
 }
 

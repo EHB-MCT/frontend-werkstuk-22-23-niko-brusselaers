@@ -1,7 +1,7 @@
 import CategoriesBar from "./CategoriesBar";
 import SearchBar from "./SearchBar";
-import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import SloganContainer from "./SloganContainer";
 import styles from "./css/Navigation.module.css";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
@@ -12,31 +12,16 @@ import { navVariants } from "../../shared/variants/navVariants";
 
 function Navigation() {
   const [language, setLanguage] = useState("");
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
-  const [onHomePage, setOnHomePage] = useState<boolean>(false)
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
   const scrollYProgress = useScroll().scrollY
-  const location = useLocation()
-
-  //if we are on homepage, set OnHomPage true else set navigation to collapsed state
-  useEffect(() => {
-    if (location.pathname === "/") {
-      setOnHomePage(true);
-      setIsCollapsed(false);
-    } else{
-      
-    }
-  }, [location]);
 
   // if user scroll above certain value on homepage, collapse navigation else open navigation
   useMotionValueEvent(scrollYProgress, "change", () => { 
-           
-    if (onHomePage) {
       if (scrollYProgress.get() > 300) {
         setIsCollapsed(true);
       } else {
         setIsCollapsed(false);
       }
-    }    
   });
 
   return (
