@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./css/CategoriesBar.module.css";
 import { motion } from "framer-motion";
-import { navVariants } from "../../shared/variants/navVariants";
+import { navVariants } from "../../../../../shared/variants/navVariants";
 
 function CatagoriesBar({ isCollapsed }: { isCollapsed: boolean }) {
   const [selectedCategory, setSelectedCategory] = useState("Design");

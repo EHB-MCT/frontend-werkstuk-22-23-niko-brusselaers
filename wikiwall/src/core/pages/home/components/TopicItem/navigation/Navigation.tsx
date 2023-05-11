@@ -5,7 +5,7 @@ import { useState } from "react";
 import SloganContainer from "./SloganContainer";
 import styles from "./css/Navigation.module.css";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { navVariants } from "../../shared/variants/navVariants";
+import { navVariants } from "../../../../../shared/variants/navVariants";
 
 
 

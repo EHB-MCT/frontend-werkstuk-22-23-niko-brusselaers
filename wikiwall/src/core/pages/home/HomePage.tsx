@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css'
-import TopicItem from './folder/TopicItem';
 import ITopicDetails from '../../shared/types/ITopicDetails';
-import Navigation from '../../components/navigation/Navigation';
-import Footer from '../../components/footer/Footer';
+import Navigation from './components/TopicItem/navigation/Navigation';
+import TopicItem from './components/TopicItem/TopicItem';
+import Footer from './components/TopicItem/footer/Footer';
 
 interface Topic {
   topicItemDetails: ITopicDetails
