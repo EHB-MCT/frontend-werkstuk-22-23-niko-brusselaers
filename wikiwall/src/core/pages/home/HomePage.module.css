@@ -21,6 +21,6 @@
 
 @media only screen and (max-height: 1440px), screen and(min-height:1080px) {
     .homePageContainer{
-        padding: 24% 0 5vh;
+        padding: 40% 0 5vh;
     }
 }
