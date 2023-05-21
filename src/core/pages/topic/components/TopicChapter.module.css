@@ -1,61 +1,68 @@
 .chapterContainerLeft,.chapterContainerRight{
-    margin-bottom: 25em;
-    width:  60em;
-    height: 38em;
-    position: relative;
+    margin-bottom: 50vh;
     display: flex;
-    flex-direction: column;
 
-}
-
-.chapterContainerLeft h1,.chapterContainerRight h1{
-    text-decoration: underline;
-    font-size: 25pt;
-    width: 40%;
 }
 
 .chapterContainerLeft img,.chapterContainerRight img{
-    width: 40em;
-    position: absolute;
-    background-color: white;
-    color: var(--secondary-dark-gray);
-    border: solid 3px var(--secondary-dark-gray);
+    margin: 0% 2%;
+    width: 60%;
 }
 
-.chapterContainerLeft p,.chapterContainerRight p{
-    width: 25em;
-    background-color: white;
-    color: var(--secondary-dark-gray);
-    border: solid 2px var(--secondary-dark-gray);
-    padding: 1em 2em;
-    font-weight: bold;
-    margin: 0;
-}
-
-.chapterContainerLeft div,.chapterContainerRight div{
-    position: absolute;
+.chapterContainerLeft div, .chapterContainerRight div{
+    background-color: var(--primary-white);
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-    top: 20em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5%;
+    width: 40%;
 }
 
-.chapterContainerLeft div{
+
+.chapterContainerLeft div *, .chapterContainerRight div *{
+    width: 80%;
+    margin: 10% 0%;
+}
+
+.chapterContainerLeft div h1, .chapterContainerRight div h1{
+    color: var(--primary-blue);
+}
+
+.chapterContainerLeft div p, .chapterContainerRight div p{
+    padding: 0 .5em ;
+}
+
+
+
+.chapterContainerLeft{
     flex-direction: row-reverse;
     
 }
 
-.chapterContainerRight div{
-    flex-direction: row;
+.chapterContainerRight{
+    flex-direction:row;
     
 }
 
-
-.chapterContainerLeft img{
-    right: 0;
+.chapterContainerLeft div{
+    text-align: start;
 }
 
-.chapterContainerRight img{
-    left: 0;
+.chapterContainerRight div{
+    text-align: end;
 }
+
+.chapterContainerLeft h1{
+    border-left: 1px var(--primary-blue) solid;
+    padding-left: .5em;
+
+}
+
+.chapterContainerRight h1{
+    border-right: 1px var(--primary-blue) solid;
+    padding-right: .5em;
+
+}
+
+
