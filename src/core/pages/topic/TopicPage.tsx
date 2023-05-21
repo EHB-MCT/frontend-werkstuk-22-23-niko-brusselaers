@@ -6,6 +6,7 @@ import TopicChapter from "./components/TopicChapter";
 import TopicReferences from "./components/TopicReferences";
 import TopicIntro from "./components/TopicIntro";
 import ChapterTitle from "./components/ChapterTitle";
+import CanvasInfographic from "./components/CanvasInfographic";
 
 function TopicPage() {
   const [carData, setCarData] = useState<carData | undefined>(undefined);
@@ -44,6 +45,7 @@ function TopicPage() {
             }
           })}
         </div>
+        <CanvasInfographic/>
         <ChapterTitle title={"Sources and Handy links"} />
         <TopicReferences
           references={["ref1", "ref2", "ref3", "ref4", "ref5", "ref6"]}

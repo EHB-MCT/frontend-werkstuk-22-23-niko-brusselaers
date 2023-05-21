@@ -1,0 +1,18 @@
+.canvasInfographicContainter{
+    position: relative;
+    width: 75em;
+    height: 50em;
+    background-color: var(--secondary-blue);
+}
+
+.canvasInfographicContainter img{
+    width: 100%;
+    height: 100%;}
+
+.canvasInfographicContainter canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
