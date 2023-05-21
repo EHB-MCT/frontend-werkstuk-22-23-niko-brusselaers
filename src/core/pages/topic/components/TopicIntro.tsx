@@ -1,14 +1,35 @@
 import styles from './TopicIntro.module.css'
 import { topicChapter } from "../../../types/topicChapter";
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 
 function TopicIntro({ introChapter }: { introChapter: topicChapter | undefined }) {
+  const {scrollY} = useScroll();
+  const verticalMove = useTransform(scrollY, [0, 500], [0, -100]);
+
   return (
     <div className={styles.introductionContainer}>
-      <h1>{introChapter?.title}</h1>
-      <p>{introChapter?.description}</p>
+      <motion.h1
+        style={{ y: verticalMove }}
+        animate={{ y: [100, 0], opacity: [0, 1] }}
+        transition={{ ease: "easeOut", duration: ".75", delay: 1 }}
+      >
+        {introChapter?.title}
+      </motion.h1>
+      <motion.p
+        style={{ y: verticalMove }}
+        animate={{ x: [-200, 0], opacity: [0, 1] }}
+        transition={{ ease: "easeOut", duration: "1", delay: 1.6 }}
+      >
+        {introChapter?.description}
+      </motion.p>
       <div className={styles.imageContainer}>
-        <img src={introChapter?.image} alt="" />
+        <motion.img
+          animate={{ scale: [0, 1], opacity: [0, 1] }}
+          transition={{ duration: ".5", delay: 0.25 }}
+          src={introChapter?.image}
+          alt=""
+        />
       </div>
     </div>
   );

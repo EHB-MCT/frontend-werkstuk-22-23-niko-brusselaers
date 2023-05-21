@@ -5,6 +5,7 @@ import { carData } from "../../types/carData";
 import TopicChapter from "./components/TopicChapter";
 import TopicReferences from "./components/TopicReferences";
 import TopicIntro from "./components/TopicIntro";
+import ChapterTitle from "./components/ChapterTitle";
 
 function TopicPage() {
   const [carData, setCarData] = useState<carData | undefined>(undefined);
@@ -14,7 +15,7 @@ function TopicPage() {
     getCarData().then((data) => {
       setCarData(data);
     });
-  }, []);
+  });
 
   return (
     <div className={styles.topicPage}>
@@ -22,6 +23,7 @@ function TopicPage() {
       <div className={styles.TopicContainer}>
         <TopicIntro introChapter={carData?.introduction} />
         <div className={styles.topicChapterContainer}>
+          <ChapterTitle title={"innovation and evolution of cars"} />
           {carData?.chapters.map((chapterData, index) => {
             if (index % 2 === 0) {
               return (
@@ -29,7 +31,6 @@ function TopicPage() {
                   fetchedChapterData={chapterData}
                   key={index}
                   imageIsLeft={true}
-                  scrollYPosition={index * 1000}
                 />
               );
             } else {
@@ -38,13 +39,15 @@ function TopicPage() {
                   fetchedChapterData={chapterData}
                   key={index}
                   imageIsLeft={false}
-                  scrollYPosition={index * 1000}
                 />
               );
             }
           })}
-          <TopicReferences references={["test1", "test2", "test3"]} />
         </div>
+        <ChapterTitle title={"Sources and Handy links"} />
+        <TopicReferences
+          references={["ref1", "ref2", "ref3", "ref4", "ref5", "ref6"]}
+        />
       </div>
       <div className={styles.bannerBottom} />
     </div>

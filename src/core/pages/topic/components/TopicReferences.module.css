@@ -1,9 +1,24 @@
 .topicReferencesContainer{
-    padding-bottom: 20em;
+    padding: 5em 0 15em;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.topicReferencesContainer ul li a{
-    color: (--secondary-dark-gray);
-    font-size: 11pt;
+.topicReferencesContainer a{
+    text-decoration: none; 
+    color: var(--secondary-dark-gray);
+    text-align: center;
+    font-size: 14pt;
     font-weight: bold;
+    padding: 3em 8em;
+    margin: 2em;
+    border: 1.5px solid var(--secondary-dark-gray);
+}
+
+.topicReferencesContainer a:hover{
+    color: var(--primary-white);
+    background-color: var(--primary-blue);
 }

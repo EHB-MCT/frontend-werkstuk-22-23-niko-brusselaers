@@ -9,6 +9,7 @@
 .introductionContainer p{
     align-self: center;
     width: 40%;
+    margin-right: 5em;
     font-weight: bold;
     color: var(--secondary-dark-gray);
 }
@@ -29,7 +30,7 @@
     font-size: 250pt;
     font-weight: 400;
     bottom: -20rem;
-    left: 12%;
+    left: 15%;
 }
 
 

@@ -1,0 +1,28 @@
+.chapterTitle{
+    align-self: flex-end;
+    position: relative;
+    margin: 15vh 0;
+    width: 80em;
+    height: 18em;
+}
+
+.chapterTitle h1{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    text-align: end;
+    font-size: 80pt;
+    font-weight: 1000;
+    color: var(--primary-white);
+    z-index: 1;
+}
+
+.chapterTitle div{
+    background-color: var(--primary-blue);
+    position: absolute;
+    top: 0;
+    right: 0%;
+    height: 100%;
+    width: 75%;
+    z-index: 0;
+}

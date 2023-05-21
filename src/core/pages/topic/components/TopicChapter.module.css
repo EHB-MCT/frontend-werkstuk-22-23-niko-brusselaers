@@ -20,6 +20,7 @@
 }
 
 
+
 .chapterContainerLeft div *, .chapterContainerRight div *{
     width: 80%;
     margin: 10% 0%;
@@ -27,10 +28,13 @@
 
 .chapterContainerLeft div h1, .chapterContainerRight div h1{
     color: var(--primary-blue);
+    text-transform:capitalize
 }
 
 .chapterContainerLeft div p, .chapterContainerRight div p{
     padding: 0 .5em ;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 
@@ -54,13 +58,13 @@
 }
 
 .chapterContainerLeft h1{
-    border-left: 1px var(--primary-blue) solid;
+    border-left: 3px solid;
     padding-left: .5em;
 
 }
 
 .chapterContainerRight h1{
-    border-right: 1px var(--primary-blue) solid;
+    border-right: 3px solid;
     padding-right: .5em;
 
 }

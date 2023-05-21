@@ -1,5 +1,6 @@
 .topicPage{
     background-color: var(--secondary-gray);
+    overflow-x: hidden;
 }
 .bannerTop{
     background-color: var(--primary-blue);
