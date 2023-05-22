@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./TopicPage.module.css";
 import getCarData from "../../services/dataService";
-import { carData } from "../../types/carData";
+import { ICarData } from "../../types/ICarData";
 import TopicChapter from "./components/TopicChapter";
 import TopicReferences from "./components/TopicReferences";
 import TopicIntro from "./components/TopicIntro";
@@ -9,7 +9,7 @@ import ChapterTitle from "./components/ChapterTitle";
 import CanvasInfographic from "./components/CanvasInfographic";
 
 function TopicPage() {
-  const [carData, setCarData] = useState<carData | undefined>(undefined);
+  const [carData, setCarData] = useState<ICarData | undefined>(undefined);
 
   //method to retrieve data about Topic
   useEffect(() => {
@@ -45,7 +45,7 @@ function TopicPage() {
             }
           })}
         </div>
-        <CanvasInfographic/>
+        <CanvasInfographic />
         <ChapterTitle title={"Sources and Handy links"} />
         <TopicReferences
           references={["ref1", "ref2", "ref3", "ref4", "ref5", "ref6"]}

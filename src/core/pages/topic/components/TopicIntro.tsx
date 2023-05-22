@@ -1,9 +1,9 @@
 import styles from './TopicIntro.module.css'
-import { topicChapter } from "../../../types/topicChapter";
+import { ITopicChapter } from "../../../types/ITopicChapter";
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 
-function TopicIntro({ introChapter }: { introChapter: topicChapter | undefined }) {
+function TopicIntro({ introChapter }: { introChapter: ITopicChapter | undefined }) {
   const {scrollY} = useScroll();
   const verticalMove = useTransform(scrollY, [0, 500], [0, -100]);
 
