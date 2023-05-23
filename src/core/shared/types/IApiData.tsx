@@ -1,4 +1,4 @@
 export interface IApiData {
-    year: string;
+    year: number;
     cars: number;
 }

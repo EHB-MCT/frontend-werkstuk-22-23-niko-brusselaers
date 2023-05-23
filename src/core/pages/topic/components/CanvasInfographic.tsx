@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { IApiData } from "../../../shared/types/IApiData";
-
 import styles from './css/canvasInfographic.module.css'; 
 import getApiData from '../../../services/ApiDataService';
+import AnimatedNumbers from "react-animated-numbers";
+
 
 function CanvasInfographic() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -10,6 +11,7 @@ function CanvasInfographic() {
     const [canvasHeight,setCanvasHeight] = useState<number>(0);
     const [ctx,setCtx] = useState<CanvasRenderingContext2D | null>(null);
     const [apiData, setApiData] = useState<IApiData[] | null>(null);
+    const [currentData, setCurrentData] = useState<IApiData | null>(null);
 
     useEffect(() => {
       const canvas = canvasRef.current;
@@ -22,36 +24,37 @@ function CanvasInfographic() {
     useEffect(() => {
       getApiData().then((data) => {
         setApiData(data);
-        updateAmountOfDots(data[0].cars)
+        updateData(data[0])
         
       })
     }, []);
 
-    const updateAmountOfDots = (amount: number) => {
-      drawRandomDots(amount);      
+    const updateData = (data: IApiData) => {
+      drawRandomDots(data.cars);
+      setCurrentData(data);      
     };
 
-    const drawRandomDots = (amount:number) => {
+    const drawRandomDots = (cars: number) => {
         const color = "#000090";
         let size = 3;
         let multiplier = 1;
 
-        if (amount > 1000000) {
+        if (cars > 1000000) {
           multiplier = 0.001;
           size = 4;
         }
 
-        if (amount > 100000000) {
+        if (cars > 100000000) {
           multiplier = 0.0005;
           size = 5;
         }
         
-        if (amount > 300000000) {
+        if (cars > 300000000) {
           multiplier = 0.00009;
           size = 7;
         }
 
-        if (amount > 1000000000) {
+        if (cars > 1000000000) {
           multiplier = 0.00005;
           size = 9;
         }
@@ -61,7 +64,7 @@ function CanvasInfographic() {
         ctx.clearRect(0, 0, 3840, 2160);
 
 
-         for (let i = 0; i < amount * multiplier; i++) {
+         for (let i = 0; i < cars * multiplier; i++) {
            const x = Math.random() * canvasWidth;
            const y = Math.random() * canvasHeight;
 
@@ -77,10 +80,20 @@ function CanvasInfographic() {
         <div className={styles.canvasContainter}>
           <img src="./assets/images/world_map.png" alt="" />
           <canvas width={3840} height={2160} ref={canvasRef}></canvas>
+          <div className={styles.titleContainer}>
+            <h1>
+              <AnimatedNumbers
+              includeComma 
+              animateToNumber={currentData ? currentData.cars : 0}/>
+              cars in the world
+              <AnimatedNumbers 
+              animateToNumber={currentData ? currentData.year : 0}/>   
+            </h1>         
+          </div>
         </div>
         <div className={styles.optionsContainer}>
             {(apiData ? apiData.map((data) => {
-              return <button key={data.year} onClick={() => updateAmountOfDots(data.cars)}>{data.year}</button>}) 
+              return <button key={data.year} onClick={() => updateData(data)}>{data.year}</button>}) 
               : <></>)}
         </div>
       </div>

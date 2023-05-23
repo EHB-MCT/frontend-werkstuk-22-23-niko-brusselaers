@@ -28,11 +28,27 @@
     height: 100%;
 }
 
+.titleContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: var(--primary-white);
+    top: 0.5em;
+}
+
+.titleContainer *{
+    justify-content: center;
+    text-align: center;
+}
+
 .optionsContainer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 30%;
+    height: 60%;
     align-content: center;
     justify-content: center;
 }
@@ -40,5 +56,16 @@
 .optionsContainer button{
     width: 30%;
     height: 3em;
+    border-radius: 25px;
+    border: none;
+    margin: 1em;
 
+}
+
+.optionsContainer button:hover{
+    width: 30%;
+    height: 3em;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    
 }

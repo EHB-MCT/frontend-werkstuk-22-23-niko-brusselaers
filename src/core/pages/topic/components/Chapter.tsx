@@ -10,7 +10,7 @@ function Chapter({fetchedChapterData,imageIsLeft}: {fetchedChapterData: ITopicCh
   const [chapterImage, setChapterImage] = useState<string>("");
   const [chapterDescription, setChapterDescription] = useState<string>("");
 
-
+  
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true })
   const horizontalAnimation = useAnimation()
