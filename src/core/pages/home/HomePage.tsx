@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css'
-import ITopicDetails from '../../shared/types/ITopicDetails';
+import {ITopicDetails} from '../../shared/types/ITopicDetails';
 import Navigation from './components/TopicItem/navigation/Navigation';
 import TopicItem from './components/TopicItem/TopicItem';
 import Footer from './components/TopicItem/footer/Footer';

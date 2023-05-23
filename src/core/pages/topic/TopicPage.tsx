@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./TopicPage.module.css";
 import getCarData from "../../services/dataService";
-import { ICarData } from "../../types/ICarData";
-import TopicChapter from "./components/TopicChapter";
-import TopicReferences from "./components/TopicReferences";
-import TopicIntro from "./components/TopicIntro";
+import { ICarData } from "../../shared/types/ICarData";
+import Chapter from "./components/Chapter";
+import References from "./components/References";
+import Intro from "./components/Intro";
 import ChapterTitle from "./components/ChapterTitle";
 import CanvasInfographic from "./components/CanvasInfographic";
-import TopicModel from "./components/TopicModel";
+import Model from "./components/Model";
 
 function TopicPage() {
   const [carData, setCarData] = useState<ICarData | undefined>(undefined);
@@ -23,13 +23,13 @@ function TopicPage() {
     <div className={styles.topicPage}>
       <div className={styles.bannerTop} />
       <div className={styles.TopicContainer}>
-        <TopicIntro introChapter={carData?.introduction} />
+        <Intro introChapter={carData?.introduction} />
         <div className={styles.topicChapterContainer}>
           <ChapterTitle title={"innovation and evolution of cars"} />
           {carData?.chapters.map((chapterData, index) => {
             if (index % 2 === 0) {
               return (
-                <TopicChapter
+                <Chapter
                   fetchedChapterData={chapterData}
                   key={index}
                   imageIsLeft={true}
@@ -37,7 +37,7 @@ function TopicPage() {
               );
             } else {
               return (
-                <TopicChapter
+                <Chapter
                   fetchedChapterData={chapterData}
                   key={index}
                   imageIsLeft={false}
@@ -47,11 +47,11 @@ function TopicPage() {
           })}
         </div>
         {/* <ChapterTitle title={"3D model"} /> */}
-        <TopicModel />
+        <Model />
         {/* <ChapterTitle title={"Live Data"} /> */}
         <CanvasInfographic />
         <ChapterTitle title={"Sources and Handy links"} />
-        <TopicReferences
+        <References
           references={["ref1", "ref2", "ref3", "ref4", "ref5", "ref6"]}
         />
       </div>

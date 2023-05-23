@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "./TopicChapter.module.css";
-import { ITopicChapter } from "../../../types/ITopicChapter";
+import styles from "./css/chapter.module.css";
+import { ITopicChapter } from "../../../shared/types/ITopicChapter";
 import { motion,useInView,useAnimation} from "framer-motion";
 
 
-function TopicChapter({fetchedChapterData,imageIsLeft}: {fetchedChapterData: ITopicChapter, imageIsLeft: boolean}) {
+function Chapter({fetchedChapterData,imageIsLeft}: {fetchedChapterData: ITopicChapter, imageIsLeft: boolean}) {
   const [chapterYear, setChapterYear] = useState<string>("");
   const [chapterTitle, setChapterTitle] = useState<string>("");
   const [chapterImage, setChapterImage] = useState<string>("");
@@ -60,4 +60,4 @@ function TopicChapter({fetchedChapterData,imageIsLeft}: {fetchedChapterData: ITo
   );
 }
 
-export default TopicChapter;
+export default Chapter;

@@ -1,5 +1,5 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import styles from "./ChapterTitle.module.css";
+import styles from "./css/chapterTitle.module.css";
 import { useEffect, useRef, useState } from "react";
 
 function ChapterTitle({ title }: { title: string | undefined }) {
@@ -15,7 +15,6 @@ function ChapterTitle({ title }: { title: string | undefined }) {
 
   useEffect(() => {
     if (isInView && scrollYPosition === 0) {
-      console.log("in view");
       setScrollYPosition(scrollY.get());
     }
   }, [isInView, scrollYPosition, scrollY]);

@@ -1,7 +1,7 @@
-import styles from './TopicReferences.module.css'
+import styles from './css/references.module.css'
 
 
-function TopicReferences({references}:{references:string[]}) {
+function References({references}:{references:string[]}) {
     return (
       <div className={styles.topicReferencesContainer}>
           {references.map((reference, index) => (
@@ -11,4 +11,4 @@ function TopicReferences({references}:{references:string[]}) {
     );
 }
 
-export default TopicReferences;
+export default References;
