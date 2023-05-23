@@ -4,21 +4,24 @@ import { OrthographicCamera, useGLTF } from "@react-three/drei";
 import styles from "./RotatingModelViewer.module.css";
 import { IModel } from "../../../types/IModel";
 
-function RotatingModelViewer({ chapterModel }: { chapterModel: IModel }) {
+
+function RotatingModelViewer({ model }: { model: IModel }) {
+
+
   const Model = () => {
-    const model = useGLTF(chapterModel.path);
+    const gltf = useGLTF(model.path);
     const { camera } = useThree();
     const modelRef = useRef<THREE.Mesh>(null);
 
     useEffect(() => {
-      if (model) {
-        model.scene.traverse((o) => {
+      if (gltf) {
+        gltf.scene.traverse((o) => {
           o.castShadow = true;
           o.receiveShadow = true;
         });
-        model.scene.scale.set(chapterModel.scale, chapterModel.scale, chapterModel.scale);
+        gltf.scene.scale.set(model.scale, model.scale, model.scale);
       }
-    }, [model]);
+    }, [gltf]);
 
     useFrame(() => {
       if (modelRef.current) {
@@ -29,32 +32,29 @@ function RotatingModelViewer({ chapterModel }: { chapterModel: IModel }) {
     });
 
     return (
-      <primitive object={model.scene} ref={modelRef} castShaddows />
+      <primitive object={gltf.scene} ref={modelRef} castShaddows />
     );
   };
 
   return (
     <div className={styles.threeDModelComponent}>
       <Canvas
-        shadows={true}
-        camera={{ position: [5, 3, 5] }}
+        shadows
       >
-        <Suspense fallback={null}>
           <ambientLight intensity={.5} />
           <directionalLight
             position={[0, 100, 100]}
             intensity={0.5}
             castShadow
           />
-          <OrthographicCamera makeDefault position={[0, 2, 15]} zoom={50} />
+          <OrthographicCamera makeDefault position={[0, 2, 15]} zoom={70} />
           <group>
             <Model />
-            <mesh receiveShadow position={[0, -0.125, 0]}>
-              <cylinderBufferGeometry args={[4, 4, chapterModel.pedistalPositionY, 64]} />
+            <mesh receiveShadow position={[0, model.pedistalPositionY, 0]}>
+              <cylinderBufferGeometry args={[4, 4, 0.5, 64]} />
               <meshLambertMaterial color="#515054" />
             </mesh>
           </group>
-        </Suspense>
       </Canvas>
     </div>
   );

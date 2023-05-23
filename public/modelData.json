@@ -1,0 +1,19 @@
+{
+    "models":[
+        {
+        "name":"Ford Model T" ,
+        "path":"./assets/models/ford_model_t.glb",
+        "scale": 0.03 ,
+        "pedistalPositionY":-0.65
+      },{
+        "name":"Volkswagen 3" , 
+        "path":"./assets/models/volkswagen_3.glb",
+        "scale": 1.5 ,
+        "pedistalPositionY":0.125
+      },{
+        "name":"Mercedes" ,
+        "path":"./assets/models/modern_car.glb",
+        "scale": 1.3 ,
+        "pedistalPositionY":0.125
+      }]
+}

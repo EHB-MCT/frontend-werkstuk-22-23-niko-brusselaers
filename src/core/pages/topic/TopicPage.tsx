@@ -7,6 +7,7 @@ import TopicReferences from "./components/TopicReferences";
 import TopicIntro from "./components/TopicIntro";
 import ChapterTitle from "./components/ChapterTitle";
 import CanvasInfographic from "./components/CanvasInfographic";
+import TopicModel from "./components/TopicModel";
 
 function TopicPage() {
   const [carData, setCarData] = useState<ICarData | undefined>(undefined);
@@ -45,6 +46,9 @@ function TopicPage() {
             }
           })}
         </div>
+        {/* <ChapterTitle title={"3D model"} /> */}
+        <TopicModel />
+        {/* <ChapterTitle title={"Live Data"} /> */}
         <CanvasInfographic />
         <ChapterTitle title={"Sources and Handy links"} />
         <TopicReferences
