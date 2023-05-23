@@ -7,37 +7,29 @@ import { motion,useInView,useAnimation} from "framer-motion";
 function Chapter({fetchedChapterData,imageIsLeft}: {fetchedChapterData: ITopicChapter, imageIsLeft: boolean}) {
   const [chapterYear, setChapterYear] = useState<string>("");
   const [chapterTitle, setChapterTitle] = useState<string>("");
-  const [chapterImage, setChapterImage] = useState<string>("");
-  const [chapterDescription, setChapterDescription] = useState<string>("");
-
   
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true })
   const horizontalAnimation = useAnimation()
 
-
+    //seperate title into two pieces and store them in seperate variables
     useEffect(() => {
     if (fetchedChapterData) {
       let [year, title] = fetchedChapterData.title.split(" - ");
       setChapterYear(year);
       setChapterTitle(title);
-      setChapterImage(fetchedChapterData.image);
-      setChapterDescription(fetchedChapterData.description);
     }
     }, [fetchedChapterData]);
   
-
-  useEffect(() => {
-    if (isInView) {
-      horizontalAnimation.start({
-        x: 0
-      });
-    } else{
-      horizontalAnimation.start({
-        x: imageIsLeft ? -600 : 600
-      })
-    }
-    }, [horizontalAnimation, imageIsLeft, isInView]);
+    //if the component is in view, apply animation
+    useEffect(() => {
+      if (isInView) {
+        horizontalAnimation.start({x: 0});
+      } else{
+        horizontalAnimation.start({x: imageIsLeft ? -600 : 600})
+      }
+      }, [horizontalAnimation, imageIsLeft, isInView]
+    );
 
 
 
@@ -49,12 +41,12 @@ function Chapter({fetchedChapterData,imageIsLeft}: {fetchedChapterData: ITopicCh
       ref={ref}
       className={imageIsLeft ? styles.chapterContainerLeft : styles.chapterContainerRight}>
       <motion.img 
-      src={chapterImage} alt={chapterTitle} />
+      src={fetchedChapterData.image} alt={chapterTitle} />
       <motion.div
       className={styles.textContainer}>
         <h1>{chapterYear}<br />{chapterTitle}
         </h1>
-        <p>{chapterDescription}</p>
+        <p>{fetchedChapterData.description}</p>
       </motion.div>
     </motion.div>
   );

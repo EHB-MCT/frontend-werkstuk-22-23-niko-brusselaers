@@ -7,22 +7,25 @@ import { IModel } from "../../../shared/types/IModel";
 
 function RotatingModelViewer({ model }: { model: IModel }) {
 
-
+  //load in model
   const Model = () => {
     const gltf = useGLTF(model.path);
     const { camera } = useThree();
     const modelRef = useRef<THREE.Mesh>(null);
-
+    
     useEffect(() => {
       if (gltf) {
+        //when model is loaded, loop over objects and its childeren and set casting and receiving of shadows to true
         gltf.scene.traverse((o) => {
           o.castShadow = true;
           o.receiveShadow = true;
         });
+        //set scale of model
         gltf.scene.scale.set(model.scale, model.scale, model.scale);
       }
     }, [gltf]);
 
+    //rotate the model slightly to fully see the model
     useFrame(() => {
       if (modelRef.current) {
         modelRef.current.rotation.y += 0.001;

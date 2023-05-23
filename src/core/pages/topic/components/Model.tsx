@@ -9,13 +9,14 @@ function Model() {
     const [models, setModels] = useState<IModel[]|undefined>();
     const [selectedModel, setSelectedModel] = useState<IModel|undefined>(undefined);
     
-
+    //fetch modelData
     useEffect(() => {
         getModels().then((data) => {
             setModels(data);   
         })
     }, []);
     
+    //if modelData is fetched, set selected model to first in array
     useEffect(() => {
     if (models) {
         setSelectedModel(models[0]);

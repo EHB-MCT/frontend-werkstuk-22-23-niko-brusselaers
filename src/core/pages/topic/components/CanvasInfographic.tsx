@@ -7,20 +7,24 @@ import AnimatedNumbers from "react-animated-numbers";
 
 function CanvasInfographic() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
+    const [ctx,setCtx] = useState<CanvasRenderingContext2D | null>(null);
     const [canvasWidth,setCanvasWidth] = useState<number>(0);
     const [canvasHeight,setCanvasHeight] = useState<number>(0);
-    const [ctx,setCtx] = useState<CanvasRenderingContext2D | null>(null);
+
     const [apiData, setApiData] = useState<IApiData[] | null>(null);
     const [currentData, setCurrentData] = useState<IApiData | null>(null);
 
+    
+    //get canvas via ref and set a couple of variables
     useEffect(() => {
       const canvas = canvasRef.current;
       if (!canvas) return;
-      setCtx(canvas?.getContext("2d") ?? null);
+      setCtx(canvas.getContext("2d"));
       setCanvasWidth(canvas.width)
       setCanvasHeight(canvas.height)
     }, []);
 
+    //fetch and save data in variable
     useEffect(() => {
       getApiData().then((data) => {
         setApiData(data);
@@ -29,12 +33,15 @@ function CanvasInfographic() {
       })
     }, []);
 
-    const updateData = (data: IApiData) => {
-      drawRandomDots(data.cars);
+    //when the user clicks a button update currentData variabel 
+    //and rerender canvas with new data
+    function updateData(data: IApiData){
+      drawDots(data.cars);
       setCurrentData(data);      
     };
 
-    const drawRandomDots = (cars: number) => {
+    //draw dots on the canvas
+    const drawDots = (cars: number) => {
         const color = "#000090";
         let size = 3;
         let multiplier = 1;

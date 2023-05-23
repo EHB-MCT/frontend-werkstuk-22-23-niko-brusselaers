@@ -7,12 +7,14 @@ function ChapterTitle({ title }: { title: string | undefined }) {
   const isInView = useInView(ref);
   const { scrollY } = useScroll();
   const [scrollYPosition, setScrollYPosition] = useState<number>(0);
+  
   const verticalMove = useTransform(
     scrollY,
-    [0 + scrollYPosition, 500 + scrollYPosition],
+    [0 + scrollYPosition, 600 + scrollYPosition],
     [50, -50]
   );
 
+  //if component is in view, get current scrollposition and store in variable
   useEffect(() => {
     if (isInView && scrollYPosition === 0) {
       setScrollYPosition(scrollY.get());
