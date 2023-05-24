@@ -24,7 +24,7 @@ function Model() {
     }, [models]);
 
     return ( 
-        <div className={styles.topicModel}>
+        <div className={styles.Model}>
             <div className={styles.modelContainer}>
                 {(selectedModel ? <RotatingModelViewer model={selectedModel} /> : <></>)}
             </div>

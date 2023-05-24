@@ -11,9 +11,9 @@
     text-decoration: none; 
     color: var(--secondary-dark-gray);
     text-align: center;
-    font-size: 14pt;
+    font-size: 30pt;
     font-weight: bold;
-    padding: 3em 8em;
+    padding: 0.5em 2em;
     margin: 2em;
     border: 1.5px solid var(--secondary-dark-gray);
 }
