@@ -1,0 +1,79 @@
+.modalOverlayShown{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.overlayButton{
+    position: fixed;
+    z-index: 3;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.modalContainer{
+    background-color: var(--secondary-gray);
+    z-index: 4;
+    width: 40%;
+    height: 47%;
+    padding: 2.5%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contentContainer{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 70%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contentContainer img{
+    width: 50%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.contentContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonContainer *{
+    border: none;
+    background-color: var(--primary-white);
+    color: var(--secondary-dark-gray);
+    font-size: 14pt;
+    padding: .5em 1em;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.buttonContainer *:hover{
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}

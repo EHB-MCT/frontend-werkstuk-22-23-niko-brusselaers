@@ -1,0 +1,76 @@
+[
+    {
+      "image": "https://picsum.photos/200",
+      "title": "evolution of cars description",
+      "author": "Niko Brusselaers",
+      "url": "https://wikiwall-niko-brusselaers.onrender.com/cars",
+      "category": "Technology",
+      "is_featured": true
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "First Topic",
+      "author": "John Doe",
+      "url": "https://example.com/topic1",
+      "category": "Technology",
+      "is_featured": true
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "First Topic",
+      "author": "John Doe",
+      "url": "https://example.com/topic1",
+      "category": "Technology",
+      "is_featured": false
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "First Topic",
+      "author": "John Doe",
+      "url": "https://example.com/topic1",
+      "category": "Technology",
+      "is_featured": false
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "First Topic",
+      "author": "John Doe",
+      "url": "https://example.com/topic1",
+      "category": "Technology",
+      "is_featured": false
+    },{
+      "image": "example_image_1.jpg",
+      "title": "First Topic",
+      "author": "John Doe",
+      "url": "https://example.com/topic1",
+      "category": "Technology",
+      "is_featured": false
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "First Topic",
+      "author": "John Doe",
+      "url": "https://example.com/topic1",
+      "category": "Technology",
+      "is_featured": true
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "Second Topic",
+      "author": "Jane Smith",
+      "url": "https://example.com/topic2",
+      "category": "Science",
+      "is_featured": false
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "Third Topic",
+      "author": "Robert Johnson",
+      "url": "https://example.com/topic3",
+      "category": "Sports",
+      "is_featured": false
+    }
+  ]
+
+
+
+
+
+
+

@@ -4,7 +4,8 @@ interface ITopicDetails {
   author: string;
   title:string
   url:string
-  category:string
+  category:string,
+  isFeatured: boolean;
 }
 
 export default ITopicDetails;
