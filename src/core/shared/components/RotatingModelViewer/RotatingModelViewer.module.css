@@ -1,0 +1,11 @@
+.threeDModelComponent{
+    width: 100%;
+    height: 30em;
+}
+
+.loadingContainer{
+    width: 10em;
+    height: 10em;
+    position: absolute;
+    background: red;
+}

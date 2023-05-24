@@ -1,54 +1,61 @@
 import { useEffect, useState } from "react";
 import styles from "./TopicPage.module.css";
 import getCarData from "../../services/dataService";
-import { carData } from "../../types/carData";
-import TopicChapter from "./components/TopicChapter";
-import TopicReferences from "./components/TopicReferences";
+import { ICarData } from "../../shared/types/ICarData";
+import Chapter from "./components/Chapter";
+import References from "./components/References";
+import Intro from "./components/Intro";
+import ChapterTitle from "./components/ChapterTitle";
+import CanvasInfographic from "./components/CanvasInfographic";
+import Model from "./components/Model";
 
 function TopicPage() {
-  const [carData, setCarData] = useState<carData | undefined>(undefined);
+  const [carData, setCarData] = useState<ICarData | undefined>(undefined);
 
   //method to retrieve data about Topic
   useEffect(() => {
     getCarData().then((data) => {
       setCarData(data);
     });
-  }, []);
+  });
 
   return (
     <div className={styles.topicPage}>
-      <div className={styles.introductionContainer}>
-        <h1>CAR</h1>
-        <img
-          src={carData?.introduction.image}
-          alt=""
+      <div className={styles.bannerTop} />
+      <div className={styles.TopicContainer}>
+        <Intro introChapter={carData?.introduction} />
+        <div className={styles.topicChapterContainer}>
+          <ChapterTitle title={"innovation and evolution of cars"} isLeft={false} color="white"/>
+          {carData?.chapters.map((chapterData, index) => {
+            if (index % 2 === 0) {
+              return (
+                <Chapter
+                  fetchedChapterData={chapterData}
+                  key={index}
+                  imageIsLeft={true}
+                />
+              );
+            } else {
+              return (
+                <Chapter
+                  fetchedChapterData={chapterData}
+                  key={index}
+                  imageIsLeft={false}
+                />
+              );
+            }
+          })}
+        </div>
+        <ChapterTitle title={"Cars Troughout History "} isLeft={true} color="black"/>
+        <Model />
+        {/* <ChapterTitle title={"Live Data"} /> */}
+        <CanvasInfographic />
+        <ChapterTitle title={"Sources and Handy links"} isLeft={false} color="white"/>
+        <References
+          references={["ref1", "ref2", "ref3", "ref4", "ref5", "ref6"]}
         />
-        <p>{carData?.introduction.description}</p>
       </div>
-      <div className={styles.topicChapterContainer}>
-        {carData?.chapters.map((chapterData, index) => {
-          if (index % 2 === 0) {
-            return (
-              <TopicChapter
-                fetchedChapterData={chapterData}
-                key={index}
-                imageIsLeft={true}
-                scrollYPosition={index*1000}
-              />
-            );
-          } else {
-            return (
-              <TopicChapter
-                fetchedChapterData={chapterData}
-                key={index}
-                imageIsLeft={false}
-                scrollYPosition={index * 1000}
-              />
-            );
-          }
-        })}
-        <TopicReferences references={["test1", "test2", "test3"]}/>
-      </div>
+      <div className={styles.bannerBottom} />
     </div>
   );
 }

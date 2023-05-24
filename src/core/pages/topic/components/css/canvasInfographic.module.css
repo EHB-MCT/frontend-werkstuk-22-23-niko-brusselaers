@@ -1,0 +1,71 @@
+.infographicContainer{
+    width: 100%;
+    height: 50em;
+    background-color: var(--primary-black);
+    display: flex;
+    align-items: center;;
+}
+
+.canvasContainter{
+    position: relative;
+    width: 70%;
+    height: 90%;
+    background-color: var(--secondary-blue);
+    
+}
+
+.canvasContainter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.canvasContainter canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.titleContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: var(--primary-white);
+    top: 0.5em;
+}
+
+.titleContainer *{
+    justify-content: center;
+    text-align: center;
+}
+
+.optionsContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 60%;
+    align-content: center;
+    justify-content: center;
+}
+
+.optionsContainer button{
+    width: 30%;
+    height: 3em;
+    border-radius: 25px;
+    border: none;
+    margin: 1em;
+
+}
+
+.optionsContainer button:hover{
+    width: 30%;
+    height: 3em;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    
+}

@@ -1,42 +1,37 @@
+.topicPage{
+    background-color: var(--secondary-gray);
+    overflow-x: hidden;
+}
+.bannerTop{
+    background-color: var(--primary-blue);
+    position: absolute;
+    width: 100%;
+    height: 3em;
 
-div.topicPage{
+}
+
+
+.TopicContainer{
+    padding-top: 8em;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: url('../../../../public/assets/images/textured_background.png');
 }
 
-div.introductionContainer{
-    margin-top: 2em;
-    margin-bottom: 25em;
-    width:  60em;
-    height: 38em;
-    position: relative;
+.topicChapterContainer{
+    padding-top: 50vh;
+    background-color: var(--primary-black);
+    width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    
 }
 
-.introductionContainer h1{
-    font-size: 30pt;
-    border-bottom: 3px solid var(--secondary-dark-gray);
+
+
+.bannerBottom{
+    background-color: var(--primary-blue);
+    width: 100%;
+    height: 3em;
 }
 
-.introductionContainer img{
-    width: 70%;
-}
-
-.introductionContainer p{
-    position: absolute;
-    width: 30em;
-    bottom: 0;
-    right: 0;
-    background-color: white;
-    color: var(--secondary-dark-gray);
-    border: solid 2px var(--secondary-dark-gray);
-    padding: 1em 2em;
-    font-weight: bold;
-    font-size: .75em;
-}

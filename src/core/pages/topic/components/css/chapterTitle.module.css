@@ -1,0 +1,50 @@
+.chapterTitleLeft, .chapterTitleRight{
+    position: relative;
+    margin: 5vh 0;
+    width: 80em;
+    height: 18em;
+}
+
+.chapterTitleLeft{
+    align-self: flex-start;
+}
+
+.chapterTitleRight{
+    align-self: flex-end;
+}
+
+.chapterTitleLeft h1,.chapterTitleRight h1{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    font-size: 80pt;
+    font-weight: 1000;
+    z-index: 1;
+}
+
+.chapterTitleLeft h1{
+    text-align: start;
+
+}
+
+.chapterTitleRight h1{
+    text-align: end;
+
+}
+
+.chapterTitleLeft div,.chapterTitleRight div{
+    background-color: var(--primary-blue);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 75%;
+    z-index: 0;
+}
+
+.chapterTitleLeft div{
+    left: 0;
+}
+
+.chapterTitleRight div{
+    right: 0;
+}

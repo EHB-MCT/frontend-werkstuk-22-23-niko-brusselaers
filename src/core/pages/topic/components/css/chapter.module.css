@@ -1,0 +1,76 @@
+.chapterContainerLeft,.chapterContainerRight{
+    margin: 15vh 0%;
+    display: flex;
+    width: 100%;
+    }
+
+
+.chapterContainerLeft img,.chapterContainerRight img{
+    margin: 0% 2%;
+    width: 45%;
+    object-fit: cover;
+}
+
+.chapterContainerLeft div.textContainer, .chapterContainerRight div.textContainer{
+    background-color: var(--primary-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5%;
+    width: 40%;
+}
+
+
+
+.chapterContainerLeft div *, .chapterContainerRight div *{
+    width: 80%;
+    margin: 10% 0%;
+}
+
+.chapterContainerLeft div h1, .chapterContainerRight div h1{
+    color: var(--primary-blue);
+    text-transform:capitalize
+}
+
+.chapterContainerLeft div p, .chapterContainerRight div p{
+    padding: 0 .5em ;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+
+
+.chapterContainerLeft{
+    flex-direction: row-reverse;
+    justify-content: start;
+    
+}
+
+.chapterContainerRight{
+    flex-direction:row;
+    justify-content: end;
+    
+}
+
+.chapterContainerLeft div{
+    text-align: start;
+}
+
+.chapterContainerRight div{
+    text-align: end;
+}
+
+.chapterContainerLeft h1{
+    border-left: 3px solid;
+    padding-left: .5em;
+
+}
+
+.chapterContainerRight h1{
+    border-right: 3px solid;
+    padding-right: .5em;
+
+}
+
+
