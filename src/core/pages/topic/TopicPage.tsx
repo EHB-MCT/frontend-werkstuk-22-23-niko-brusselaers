@@ -48,9 +48,9 @@ function TopicPage() {
         </div>
         <ChapterTitle title={"Cars Troughout History "} isLeft={true} />
         <Model />
-        {/* <ChapterTitle title={"Live Data"} /> */}
+        <ChapterTitle title={"Cars around the world"} isLeft={false}/>
         <CanvasInfographic />
-        <ChapterTitle title={"Sources and Handy links"} isLeft={false} />
+        <ChapterTitle title={"Sources and Handy links"} isLeft={true} />
         <References/>
       </div>
       <div className={styles.bannerBottom} />

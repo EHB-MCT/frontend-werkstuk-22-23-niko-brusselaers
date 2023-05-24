@@ -92,7 +92,7 @@ function CanvasInfographic() {
               <AnimatedNumbers
               includeComma 
               animateToNumber={currentData ? currentData.cars : 0}/>
-              cars in the world
+              cars in the world in
               <AnimatedNumbers 
               animateToNumber={currentData ? currentData.year : 0}/>   
             </h1>         
