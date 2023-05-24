@@ -27,10 +27,13 @@
 
 .titleContainer{
     display: flex;
-    align-items: flex-end;
     height: 15%;
-    padding: 0 1em;
+    width: 100%;
+    padding: 0 .25em;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .topicItemContainer img{
     width: 100%;
@@ -40,10 +43,7 @@
 }
 
 .titleContainer p {
-    font-weight: bold;
-    font-size: 15pt;
-    object-fit: contain;
-    
+    font-size:2.5em;
     color: var(--secondary-dark-gray);
 
 }
@@ -110,7 +110,7 @@
 }
 
 .gridDefault .titleContainer > p{
-    font-size: 11pt;
+    font-size: 10pt;
 }
 
 .twoColumn{

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from './css/SloganContainer.module.css'
-import { navVariants } from '../../../../../shared/variants/navVariants';
+import { navVariants } from '../../../../shared/variants/navVariants';
 
 function SloganContainer({isCollapsed}:{isCollapsed:boolean}) {
     return (

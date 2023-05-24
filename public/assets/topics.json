@@ -1,39 +1,39 @@
 [
     {
       "image": "https://picsum.photos/200",
-      "title": "evolution of cars description",
+      "title": "The evolution of cars",
       "author": "Niko Brusselaers",
       "url": "https://wikiwall-niko-brusselaers.onrender.com/cars",
       "category": "Technology",
       "isFeatured": true
     },{
       "image": "https://picsum.photos/200",
-      "title": "Belgische Biercultuur",
-      "author": "Jens Erven",
-      "url": "https://wikiwall-app-jens-erven.onrender.com/belgian-beer-culture",
-      "category": "Culture",
-      "isFeatured": true
-    },{
-      "image": "https://picsum.photos/200",
-      "title": "De Antwerpse Zes",
+      "title": "De antwerpse zes",
       "author": "Rowan Biets",
       "url": "https://padlet.com/redirect?url=https%3A%2F%2Ffrontend-werkstuk-rowan-biets.onrender.com%2FProfiel",
       "category": "Fashion",
       "isFeatured": false
     },{
       "image": "https://picsum.photos/200",
-      "title": "The Fall of Icarus",
+      "title": "The fall of icarus",
       "author": "Judith Bosmans",
       "url": "https://example.com/topic1",
       "category": "History",
       "isFeatured": false
     },{
       "image": "https://picsum.photos/200",
-      "title": "Evolution of Smartphones",
+      "title": "Evolution of martphones",
       "author": "Mohamed Mankouchi",
       "url": "https://wikiwall.onrender.com/evolution-smartphones",
       "category": "Technology",
       "isFeatured": false
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "Belgische biercultuur",
+      "author": "Jens Erven",
+      "url": "https://wikiwall-app-jens-erven.onrender.com/belgian-beer-culture",
+      "category": "Culture",
+      "isFeatured": true
     },{
       "image": "https://picsum.photos/200",
       "title": "Gian Lorenzo Bernini",
@@ -41,31 +41,93 @@
       "url": "https://front-end-course-project-mey-lin-mus.onrender.com/topic",
       "category": "History",
       "isFeatured": false
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "Science and its Impact on Society",
+      "author": "Jane Smith",
+      "url": "https://example.com/topic2",
+      "category": "Science",
+      "is_featured": false
     },
     {
+      "image": "https://picsum.photos/200",
+      "title": "The Evolution of Sports in Modern Times",
+      "author": "Robert Johnson",
+      "url": "https://example.com/topic3",
+      "category": "Sports",
+      "is_featured": false
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "Fashion Trends: Past, Present, and Future",
+      "author": "Emily Wilson",
+      "url": "https://example.com/topic4",
+      "category": "Fashion",
+      "is_featured": true
+    },{
       "image": "https://picsum.photos/200",
       "title": "Changing earth",
       "author": "Bieke Bellot",
       "url": "https://frontend-werkstuk-22-23-biekeb2.onrender.com/topic",
       "category": "Geology",
-      "isFeatured": false
+      "isFeatured": true
     },
     {
       "image": "https://picsum.photos/200",
-      "title": "Second Topic",
-      "author": "Jane Smith",
-      "url": "https://example.com/topic2",
-      "category": "Science",
-      "isFeatured": false
+      "title": "The Importance of Health and Well-being",
+      "author": "Michael Brown",
+      "url": "https://example.com/topic5",
+      "category": "Health",
+      "is_featured": false
     },
     {
       "image": "https://picsum.photos/200",
-      "title": "Third Topic",
-      "author": "Robert Johnson",
-      "url": "https://example.com/topic3",
-      "category": "Sports",
-      "isFeatured": false
+      "title": "Business Strategies for Success ",
+      "author": "Sophia Davis",
+      "url": "https://example.com/topic6",
+      "category": "Business",
+      "is_featured": true
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "The Role of Politics in Shaping Societies",
+      "author": "David Johnson",
+      "url": "https://example.com/topic7",
+      "category": "Politics",
+      "is_featured": false
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "Exploring the World of Music, Film, and Art",
+      "author": "Olivia Moore",
+      "url": "https://example.com/topic8",
+      "category": "Entertainment",
+      "is_featured": false
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "Unveiling the Wonders of Travel and Adventure",
+      "author": "Ethan Thompson",
+      "url": "https://example.com/topic9",
+      "category": "Travel",
+      "is_featured": true
+    },{
+      "image": "https://picsum.photos/200",
+      "title": "Food Exploration",
+      "author": "Alice Johnson",
+      "url": "https://example.com/topic11",
+      "category": "Food",
+      "is_featured": false
+    },
+    {
+      "image": "https://picsum.photos/200",
+      "title": "Wonders of Wildlife",
+      "author": "Robert Thompson",
+      "url": "https://example.com/topic12",
+      "category": "Nature",
+      "is_featured": true
     }
+
+    
   ]
 
 

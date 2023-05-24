@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css'
 import {ITopicDetails} from '../../shared/types/ITopicDetails';
-import Navigation from './components/TopicItem/navigation/Navigation';
+import Navigation from './components/navigation/Navigation';
 import TopicItem from './components/TopicItem/TopicItem';
-import Footer from './components/TopicItem/footer/Footer';
+import Footer from './components/footer/Footer';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Modal from './components/Modal';
 import getTopicItems from '../../services/topicItemsService';
@@ -11,6 +11,10 @@ import getTopicItems from '../../services/topicItemsService';
 interface Topic {
   topicItemDetails: ITopicDetails
   topicGridSize: string;
+}
+
+interface filterOptions {
+  
 }
 
 function HomePage() {
@@ -29,16 +33,16 @@ function HomePage() {
        }
    });
 
+   //get topics from service and set topicItemList
    useEffect(() => {
       getTopicItems().then((data) => {
         let list:Topic[] = []
-        const gridOptions = ["twoColumn", "threeColumn twoRow"];
         data.forEach((topic:ITopicDetails) => {
 
           if (topic.isFeatured) {
               list.push({
               topicItemDetails: topic,
-              topicGridSize: gridOptions[Math.round(Math.random() * gridOptions.length)]
+              topicGridSize: "threeColumn twoRow"
               })            
           } else{
               list.push({
@@ -48,45 +52,25 @@ function HomePage() {
           }
         });
         setTopicItemList(list)
+        setFilteredTopicItemList(list)
       });
     }, []);
 
-  //  // create filler data to display on homepage
-  //   useEffect(() => {
-  //     let list:Topic[] = []
-  //     const gridOptions = ["gridDefault","twoColumn", "threeColumn twoRow"];
-  //     for (let index = 0; index < 20; index++) {
-  //       list.push({
-  //         topicItemDetails: {
-  //           image: "https://picsum.photos/200",
-  //           title: "title",
-  //           author: "some person",
-  //           url: "/",
-  //           category:'category',
-  //           isFeatured: false,
-  //         },
-  //         topicGridSize: gridOptions[Math.round(Math.random() * 2)]
-  //       });
-        
-  //     }
-  //     setTopicItemList(list)
-  //   }, []);
-
+    //update selectedTopicItem
     function handleTopicItemClick (topicItem: ITopicDetails){
     setSelectedTopicItem(topicItem);
-  };
+    };
 
     return (
       <>
         <Navigation/>
         <Modal topicItemDetails={selectedTopicItem} handleClick={handleTopicItemClick} />
-
         <div className={styles.homePageContainer}>
-          <div className={styles.sideContainer}></div>
+          <div></div>
           <motion.div 
           style={isCollapsed ?{ zIndex: 0} : {zIndex:1}}
           className={styles.topicItemsContainer}>
-            {(topicItemList?.map((element:Topic, index) => 
+            {(filteredTopicItemList?.map((element:Topic, index) => 
             <TopicItem topicItemDetails={element.topicItemDetails} 
             topicGridSize={element.topicGridSize} 
             key={index} 
