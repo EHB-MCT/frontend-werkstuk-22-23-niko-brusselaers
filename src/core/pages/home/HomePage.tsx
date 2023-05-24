@@ -15,6 +15,7 @@ interface Topic {
 
 function HomePage() {
   const [topicItemList, setTopicItemList] = useState<Topic[] | undefined>(undefined);
+  const [filteredTopicItemList, setFilteredTopicItemList] = useState<Topic[] | undefined>(undefined);
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
   const [selectedTopicItem, setSelectedTopicItem] = useState<ITopicDetails | undefined>(); 
   const scrollYProgress = useScroll().scrollY;
@@ -31,17 +32,19 @@ function HomePage() {
    useEffect(() => {
       getTopicItems().then((data) => {
         let list:Topic[] = []
+        const gridOptions = ["twoColumn", "threeColumn twoRow"];
         data.forEach((topic:ITopicDetails) => {
+
           if (topic.isFeatured) {
-            list.push({
+              list.push({
               topicItemDetails: topic,
-              topicGridSize: "twoColumn"
-            });
+              topicGridSize: gridOptions[Math.round(Math.random() * gridOptions.length)]
+              })            
           } else{
-            list.push({
+              list.push({
               topicItemDetails: topic,
               topicGridSize: "gridDefault"
-            });
+              })
           }
         });
         setTopicItemList(list)

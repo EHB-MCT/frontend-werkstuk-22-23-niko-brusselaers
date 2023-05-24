@@ -3,7 +3,8 @@ import './topicItem.css'
 import {ITopicDetails} from '../../../../shared/types/ITopicDetails';
 
 function TopicItem({topicGridSize, topicItemDetails, handleClick }: { topicGridSize: string, topicItemDetails: ITopicDetails, handleClick:Function }) {
-  
+
+
   const handleItemClick = () => {
     handleClick(topicItemDetails);
   };
@@ -22,8 +23,8 @@ function TopicItem({topicGridSize, topicItemDetails, handleClick }: { topicGridS
         <div className="titleContainer">
           <p style={{textDecoration: "none"}}>{topicItemDetails.title}</p>
         </div>
-        <div className="categoryContainer">
-          <span></span> <p>{topicItemDetails.category}</p>
+        <div className={`categoryContainer ${topicItemDetails.isFeatured ? "isFeatured" : "default"}`} >
+          <span></span> <p>{topicItemDetails.isFeatured ? "Featured" : topicItemDetails.category}</p>
         </div>
       </button>
     </motion.div>

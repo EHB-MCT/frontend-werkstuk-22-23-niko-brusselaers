@@ -41,7 +41,9 @@
 
 .titleContainer p {
     font-weight: bold;
-    font-size: 20pt;
+    font-size: 15pt;
+    object-fit: contain;
+    
     color: var(--secondary-dark-gray);
 
 }
@@ -53,8 +55,16 @@
     justify-content: space-around;
     top: .5em;
     left: .5em;
-    width: 8em;
+    width: 10em;
     border-radius: 20px;
+
+}
+
+.isFeatured{
+    background-color: var(--primary-blue);
+}
+
+.default{
     background-color: var(--secondary-dark-gray);
 
 }
@@ -80,10 +90,6 @@
 
 .featuredCategory span, .forYouCategory span,.discoverCategory span{
     display: block;
-}
-
-.featuredCategory p, .forYouCategory p,.discoverCategory p{
-    font-weight: bold;
 }
 
 .featuredCategory span{

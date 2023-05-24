@@ -6,12 +6,14 @@ import { navVariants } from "../../../../../shared/variants/navVariants";
 function CatagoriesBar({ isCollapsed }: { isCollapsed: boolean }) {
   const [selectedCategory, setSelectedCategory] = useState("Design");
   const categories = [
-    "Design",
-    "Architecture",
+    "All",
+    "Fashion",
+    "Culture",
     "Art",
-    "Biology",
+    "Science",
+    "History",
     "Sports",
-    "Authors",
+    "Technology",
     "Geology",
   ];
 

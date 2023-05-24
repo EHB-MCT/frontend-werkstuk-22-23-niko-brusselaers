@@ -1,5 +1,5 @@
 export default async function getTopicItems() {
-    return await fetch("./assets/ApiData.json").then(response => response.json())
+    return await fetch("./assets/topics.json").then(response => response.json())
     
   
 }
