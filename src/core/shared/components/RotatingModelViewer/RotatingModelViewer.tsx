@@ -3,6 +3,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrthographicCamera, useGLTF } from "@react-three/drei";
 import styles from "./RotatingModelViewer.module.css";
 import { IModel } from "../../../shared/types/IModel";
+import Loading from "../Loading/Loading";
 
 
 function RotatingModelViewer({ model }: { model: IModel }) {
@@ -25,7 +26,7 @@ function RotatingModelViewer({ model }: { model: IModel }) {
       }
     }, [gltf]);
 
-    //rotate the model slightly to fully see the model
+    //rotate the model slightly to fully see the l
     useFrame(() => {
       if (modelRef.current) {
         modelRef.current.rotation.y += 0.001;
@@ -41,24 +42,24 @@ function RotatingModelViewer({ model }: { model: IModel }) {
 
   return (
     <div className={styles.threeDModelComponent}>
-      <Canvas
-        shadows
-      >
-          <ambientLight intensity={.5} />
-          <directionalLight
-            position={[0, 100, 100]}
-            intensity={0.5}
-            castShadow
-          />
-          <OrthographicCamera makeDefault position={[0, 2, 15]} zoom={70} />
-          <group>
-            <Model />
-            <mesh receiveShadow position={[0, model.pedistalPositionY, 0]}>
-              <cylinderBufferGeometry args={[4, 4, 0.5, 64]} />
-              <meshLambertMaterial color="#515054" />
-            </mesh>
-          </group>
-      </Canvas>
+      <Suspense fallback={<Loading/>}>
+        <Canvas shadows>
+            <ambientLight intensity={.5} />
+            <directionalLight
+              position={[0, 100, 100]}
+              intensity={0.5}
+              castShadow
+            />
+            <OrthographicCamera makeDefault position={[0, 2, 15]} zoom={70} />
+            <group>
+              <Model />
+              <mesh receiveShadow position={[0, model.pedistalPositionY, 0]}>
+                <cylinderBufferGeometry args={[4, 4, 0.5, 64]} />
+                <meshLambertMaterial color="#515054" />
+              </mesh>
+            </group>
+        </Canvas>
+      </Suspense>
     </div>
   );
 }
