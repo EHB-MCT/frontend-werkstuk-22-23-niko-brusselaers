@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./topicPage.module.css";
+import styles from "./TopicPage.module.css";
 import getCarData from "../../services/dataService";
 import { ICarData } from "../../shared/types/ICarData";
 import Chapter from "./components/Chapter";
