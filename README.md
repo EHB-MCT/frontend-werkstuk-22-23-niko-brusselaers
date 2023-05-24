@@ -4,7 +4,7 @@ this is a front-end application for the wikiwall project.
 containing a homepage with a list of several topic and topicPages about several catorgories.
 
 ## Table of content
-- [WEB II front-end Brusselaers Niko](#web-ii-front-end-brusselaers-niko)
+- [Front End: wikiwall Brusselaers Niko](#web-ii-front-end-brusselaers-niko)
   - [Table of content](#table-of-content)
   - [Installation](#installation)
     - [Requirements](#requirements)
