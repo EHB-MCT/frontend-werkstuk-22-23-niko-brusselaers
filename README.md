@@ -28,12 +28,16 @@ to install and run this application you will need the following:
 
 ### used references:
 - chatGPT: https://chat.openai.com/ 
-(used to generate the content and json files)
+    (used to generate the content and json files)
 - react: https://reactjs.org/
 - react-router: https://reactrouter.com/
+    (used to create the routing)
 - react three fiber: https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
 - react three drei: https://www.npmjs.com/package/@react-three/drei
 - how to use gltf : https://stackoverflow.com/questions/71589738/how-do-i-properly-use-drei-usegltf
-- css grid: https://www.youtube.com/watch?v=jV8B24rSN5o
+    (used to create and controll 3d models)
+- css grid refresh: https://www.youtube.com/watch?v=jV8B24rSN5o
+    (used to create the grid)
 - framer motion: https://www.framer.com/motion/
 - framer motion paralax: https://codesandbox.io/s/framer-motion-parallax-effect-nhsh3
+    (used to create the paralax effect)
