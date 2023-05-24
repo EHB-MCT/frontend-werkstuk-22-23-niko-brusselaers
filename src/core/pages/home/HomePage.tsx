@@ -13,9 +13,6 @@ interface Topic {
   topicGridSize: string;
 }
 
-interface filterOptions {
-  
-}
 
 function HomePage() {
   const [topicItemList, setTopicItemList] = useState<Topic[] | undefined>(undefined);
