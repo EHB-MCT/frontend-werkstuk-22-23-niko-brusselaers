@@ -1,6 +1,6 @@
 import {motion } from 'framer-motion';
-import './topicItem.css'
 import {ITopicDetails} from '../../../../shared/types/ITopicDetails';
+import './TopicItem.css'
 
 function TopicItem({topicGridSize, topicItemDetails, handleClick }: { topicGridSize: string, topicItemDetails: ITopicDetails, handleClick:Function }) {
 
