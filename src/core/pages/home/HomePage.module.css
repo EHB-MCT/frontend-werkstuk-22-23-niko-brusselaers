@@ -10,11 +10,14 @@
     gap: 1em;
     grid-auto-flow: dense;
     z-index: 1;
-    width: 50em;
     margin-bottom: 10em;
 
 }
 
 .homePageContainer{
         padding-top:  36em;
+}
+
+.sideContainer{
+    width: 20%;
 }

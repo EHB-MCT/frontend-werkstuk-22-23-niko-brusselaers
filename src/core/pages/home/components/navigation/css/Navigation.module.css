@@ -32,6 +32,7 @@ div.navigationTopLeftContainer *, div.navigationTopRightContainer *{
     border: none;
     background-color: var(--primary-blue);
     color: var(--primary-white);
+    cursor: pointer;
 }
 
 .navigationTopLeftContainer, .navigationTopRightContainer{

@@ -2,7 +2,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import styles from "./css/chapterTitle.module.css";
 import { useEffect, useRef, useState } from "react";
 
-function ChapterTitle({ title, isLeft, color }: { title: string | undefined, isLeft: boolean, color:string }) {
+function ChapterTitle({ title, isLeft }: { title: string | undefined, isLeft: boolean }) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const { scrollY } = useScroll();
@@ -23,7 +23,7 @@ function ChapterTitle({ title, isLeft, color }: { title: string | undefined, isL
 
   return (
     <div className={isLeft ? styles.chapterTitleLeft : styles.chapterTitleRight } ref={ref}>
-      <motion.h1 initial={{ y: -100}} style={{ y: verticalMove, color: color }}>
+      <motion.h1 initial={{ y: -100}} style={{ y: verticalMove }}>
         {title}
       </motion.h1>
       <div></div>

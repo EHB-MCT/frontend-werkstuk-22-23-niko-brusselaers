@@ -1,16 +1,26 @@
 [
         {
-        "name":"Ford Model T" ,
+        "name":"Ford Model T (1908)" ,
         "path":"./assets/models/ford_model_t.glb",
         "scale": 0.03 ,
         "pedistalPositionY": -0.725
       },{
-        "name":"Volkswagen Beetle" , 
+        "name":"Volkswagen Beetle (1945)" , 
         "path":"./assets/models/volkswagen_beetle.glb",
         "scale": 1.5 ,
         "pedistalPositionY":-0.25
       },{
-        "name":"Mercedes" ,
+        "name":"Ford Mustang (1967)" ,
+        "path":"./assets/models/ford_mustang.glb",
+        "scale": 1.3 ,
+        "pedistalPositionY":-0.25
+      },{
+        "name":"Tesla Model S (2016)" , 
+        "path":"./assets/models/tesla_model_s.glb",
+        "scale": 1 ,
+        "pedistalPositionY":-1
+      },{
+        "name":"Mercedes AMG S63(2023)" ,
         "path":"./assets/models/modern_car.glb",
         "scale": 1.3 ,
         "pedistalPositionY":-0.25

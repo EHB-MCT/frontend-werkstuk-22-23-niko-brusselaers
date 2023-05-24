@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./TopicPage.module.css";
+import styles from "./topicPage.module.css";
 import getCarData from "../../services/dataService";
 import { ICarData } from "../../shared/types/ICarData";
 import Chapter from "./components/Chapter";
@@ -25,7 +25,7 @@ function TopicPage() {
       <div className={styles.TopicContainer}>
         <Intro introChapter={carData?.introduction} />
         <div className={styles.topicChapterContainer}>
-          <ChapterTitle title={"innovation and evolution of cars"} isLeft={false} color="white"/>
+          <ChapterTitle title={"innovation and evolution of cars"} isLeft={false} />
           {carData?.chapters.map((chapterData, index) => {
             if (index % 2 === 0) {
               return (
@@ -46,14 +46,12 @@ function TopicPage() {
             }
           })}
         </div>
-        <ChapterTitle title={"Cars Troughout History "} isLeft={true} color="black"/>
+        <ChapterTitle title={"Cars Troughout History "} isLeft={true} />
         <Model />
         {/* <ChapterTitle title={"Live Data"} /> */}
         <CanvasInfographic />
-        <ChapterTitle title={"Sources and Handy links"} isLeft={false} color="white"/>
-        <References
-          references={["ref1", "ref2", "ref3", "ref4", "ref5", "ref6"]}
-        />
+        <ChapterTitle title={"Sources and Handy links"} isLeft={false} />
+        <References/>
       </div>
       <div className={styles.bannerBottom} />
     </div>

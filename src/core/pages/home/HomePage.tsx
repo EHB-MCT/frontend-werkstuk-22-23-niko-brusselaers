@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from './HomePage.module.css'
+import style from './HomePage.module.css'
 import {ITopicDetails} from '../../shared/types/ITopicDetails';
 import Navigation from './components/navigation/Navigation';
 import TopicItem from './components/TopicItem/TopicItem';
@@ -65,11 +65,11 @@ function HomePage() {
       <>
         <Navigation/>
         <Modal topicItemDetails={selectedTopicItem} handleClick={handleTopicItemClick} />
-        <div className={styles.homePageContainer}>
-          <div></div>
+        <div className={style.homePageContainer}>
+          <div className={style.sideContainer}></div>
           <motion.div 
           style={isCollapsed ?{ zIndex: 0} : {zIndex:1}}
-          className={styles.topicItemsContainer}>
+          className={style.topicItemsContainer}>
             {(filteredTopicItemList?.map((element:Topic, index) => 
             <TopicItem topicItemDetails={element.topicItemDetails} 
             topicGridSize={element.topicGridSize} 
@@ -78,7 +78,7 @@ function HomePage() {
             ))
               }
         </motion.div>
-          <div></div>
+          <div className={style.sideContainer}></div>
         </div>
         <Footer/>
       </>

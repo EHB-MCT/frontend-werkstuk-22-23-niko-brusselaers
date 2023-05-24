@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SloganContainer from "./SloganContainer";
-import styles from "./css/Navigation.module.css";
+import style from "./css/Navigation.module.css";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { navVariants } from "../../../../shared/variants/navVariants";
 
@@ -27,14 +27,14 @@ function Navigation() {
   return (
     <>
       <motion.div
-        className={styles.navigation}
+        className={style.navigation}
         style={isCollapsed ? { position: "fixed" } : { position: "relative" }}
         transition={{ duration: 0.5 }}
       >
-        <div className={styles.navigationTopLeftContainer}>
-          <Link to={"#"}>
+        <div className={style.navigationTopLeftContainer}>
+          <Link to={"/"}>
             <img
-              className={styles.faviconLogo}
+              className={style.faviconLogo}
               src="./assets/images/wikiwall_favicon.png"
               alt=""
             />
@@ -42,7 +42,7 @@ function Navigation() {
           <select
             defaultValue={language}
             placeholder="test"
-            className={styles.languageOptions}
+            className={style.languageOptions}
             onChange={(e) => {
               setLanguage(e.target.value);
             }}
@@ -52,12 +52,12 @@ function Navigation() {
             <option value="NL">NL</option>
           </select>
         </div>
-        <div className={styles.navigationTopRightContainer}>
+        <div className={style.navigationTopRightContainer}>
           <button>Create</button>
           <button>Profile</button>
         </div>
         <motion.div
-          className={styles.navigationBottomContainer}
+          className={style.navigationBottomContainer}
           animate={isCollapsed ? "closed" : "open"}
           variants={navVariants.bottomContainer}
           transition={{ duration: .25 }}
@@ -68,13 +68,13 @@ function Navigation() {
             transition={{ duration: 1.5 }}
             src="./assets/images/wikiwall_logo.png"
             alt="wikiwall_logo"
-            className={styles.logo}
+            className={style.logo}
           />
           <SearchBar />
           <CategoriesBar isCollapsed={isCollapsed} />
           <SloganContainer isCollapsed={isCollapsed} />
         </motion.div>
-        <div className={styles.backgroundColorContainer}></div>
+        <div className={style.backgroundColorContainer}></div>
       </motion.div>
     </>
   );

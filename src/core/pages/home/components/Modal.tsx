@@ -22,8 +22,8 @@ function Modal({ topicItemDetails, handleClick }: {  topicItemDetails: ITopicDet
             </div>
           </div>
         <div className={styles.buttonContainer}>
-          <button onClick={handleCloseClick}>Close modal</button>
-          <a href={topicItemDetails.url} target="_blank" rel="noopener noreferrer">visit page</a>
+          <button onClick={handleCloseClick}>close </button>
+          <a href={topicItemDetails.url} target="_blank" rel="noopener noreferrer">continue</a>
         </div>
       </div>
     </div>

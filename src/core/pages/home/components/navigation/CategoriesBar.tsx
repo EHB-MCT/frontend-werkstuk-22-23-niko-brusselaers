@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { navVariants } from "../../../../shared/variants/navVariants";
 
 function CatagoriesBar({ isCollapsed }: { isCollapsed: boolean }) {
-  const [selectedCategory, setSelectedCategory] = useState("Design");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = [
     "All",
     "Fashion",
